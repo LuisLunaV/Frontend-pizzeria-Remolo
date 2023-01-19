@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+        <div class="nombre-logo">
+            <img src="./assets/img/logo/logo.jpg" class="logo" alt="">
+            <h4>PIZZERÍA <span>DON REMOLO</span></h4>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn-dropdown" type="button" >
+              HOLA, CLIENTE
+            </button>
+            <div class="dropdown-menu mostrar-dropdown" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Inicia tu pedido</a>
+            </div>
+          </div>
+    </header>
+
+    <main class="cuerpo">
+      <div class="informacion-principal ancho-50">
+        <h1>Recibe tu comida<br/>sin necesidad<br/>de salir de casa.</h1>
+        <p class="p-large">Saborea la autenticidad italiana con nuestra pizza artesanal hecha a mano con ingredientes frescos y de alta calidad.
+          Pedir nunca ha sido tan fácil, solo unos clics y tu pizza estará lista para entrega.
+        </p>
+      </div>
+      <div class="imagen-principal ancho-50">
+        <img src="./assets/img/bici-uno-sinfondo.png" alt="">
+      </div>
+    </main>
+
+    <section class="lista-categorias">
+      <ul>
+        <li class="item item-pizza">
+          <div class="img-categoria">
+            <img src="./assets/categorias/pizza.png" alt="img-pizza" />
+          </div>
+          <div class="nombre-categoria">
+            <p>Pizzas</p>
+          </div>
+        </li>
+        <li class="item item-bebida">
+            <div class="img-categoria">
+                <img src="./assets/categorias/bebida.png" alt="img-babida" />
+              </div>
+              <div class="nombre-categoria">
+                <p>Bebidas</p>
+              </div>
+        </li>
+        <li class="item item-postre">
+            <div class="img-categoria">
+                <img src="./assets/categorias/postre.png" alt="img-postre" />
+              </div>
+              <div class="nombre-categoria">
+                <p>Postres</p>
+              </div>
+        </li>
+        <li class="item item-empanada">
+            <div class="img-categoria">
+                <img src="./assets/categorias/empanada.png" alt="img-empanada" />
+              </div>
+              <div class="nombre-categoria">
+                <p>Empanadas</p>
+              </div>
+        </li>
+      </ul>
+    </section>
+    <script src="./JS/index.js" type="module"></script>
+  </body>
+</html>

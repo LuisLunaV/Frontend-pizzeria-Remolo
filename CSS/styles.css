@@ -1,0 +1,137 @@
+:root {
+  --fuentePrincipal: "Montserrat", sans-serif;
+  --fuenteSecundaria: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%; /** 1REM = 10pX **/
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f3f3dc;
+  line-height: 1.5;
+}
+/* Utilidades */
+.mostrar-dropdown {
+  display: none;
+}
+
+.ancho-50 {
+  width: 50%;
+}
+
+.p-large {
+  font-size: 1.5rem;
+  font-family: var(--fuenteSecundaria);
+  font-weight: 400;
+  color: #626262;
+}
+
+/* Global */
+h1 {
+  font-size: 4.4rem;
+}
+h2 {
+  font-size: 3.6rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+header {
+  padding: 1rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+/* header */
+.logo {
+  max-height: 7rem;
+  max-width: 7rem;
+}
+.nombre-logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.nombre-logo h4 {
+  font-family: var(--fuentePrincipal);
+  font-weight: 800;
+}
+
+.nombre-logo h4 span {
+  color: #e54322;
+}
+/* Contenedor principal */
+.cuerpo {
+  padding: 0 0 0 10rem;
+  height: 64vh;
+  background-image: linear-gradient(to left top, #f1aca4 0%, #f3f3dc 70%);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cuerpo h1 {
+  font-family: var(--fuenteSecundaria);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.informacion-principal {
+  padding: 0 22rem 0 0;
+}
+/* Contenedro categorias */
+.lista-categorias {
+  height: 20.2vh;
+  display: flex;
+  align-items: center;
+}
+.lista-categorias ul {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.lista-categorias ul li{
+    overflow: hidden;
+    padding: 2rem;
+    max-width: 15rem;
+    border-radius: .8rem;
+    box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.53);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-categoria img {
+  max-height: 4rem;
+  max-width: 4rem;
+}
