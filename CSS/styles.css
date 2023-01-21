@@ -90,21 +90,26 @@ img {
 }
 
 .btn-dropdown span{
-  color: #e54322;
+  color: #ff6000;
 }
 
 .dropdown-menu{
   background-color: white;
+  border: 1px solid rgb(255, 96, 0);
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 4px 0px;
   margin-top: .5rem;
   padding: 2rem;
   position: absolute;
   z-index: 3;
+  right: 10rem;
 }
 
 .dropdown-item{
+  color: #313130;
 text-decoration: none;
 font-family: var(--fuentePrincipal);
-font-size: 1.3rem;
+font-size: 1.5rem;
+font-weight: 700;
 }
 
 /* Contenedor principal */
