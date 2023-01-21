@@ -103,37 +103,52 @@ img {
 .lista-categorias {
   height: 19.5vh;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .lista-categorias ul {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: auto;
   height: auto;
   list-style: none;
   display: grid;
   grid-template-columns:repeat( 4, 1fr);
+  gap: 1rem;
   
 }
 
 .item {
+  overflow: hidden;
   /* Centramos los items dentro de la cuadricula del grid  "li"*/
   justify-self: center;
   align-self: center;
   /* ********** */
   overflow: hidden;
-  padding: 2rem;
-  max-width: 15rem;
+  padding: 1.8rem;
+  width: 20rem;
+  max-width: 20rem;
   border-radius: .8rem;
   box-shadow: 0px 0px 21px -2px rgba(0,0,0,0.53);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap:.5rem;
 }
-
-
-
+.img-categoria{
+  border-radius: .5rem;
+  background-image: linear-gradient(to right bottom, #ea7f60, #ea7554, #e96b49, #e8603d, #e75432, #e64f2d, #e64927, #e54322, #e54322, #e54322, #e54322, #e54322);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .img-categoria img {
   max-height: 4rem;
   max-width: 4rem;
+}
+
+.nombre-categoria p{
+  color: #313130;
+  font-family: var(--fuenteSecundaria);
+  font-weight: 700;
+  font-size: 1.5rem;
 }
