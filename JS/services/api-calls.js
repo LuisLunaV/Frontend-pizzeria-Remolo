@@ -9,3 +9,30 @@ const { usuarios, categorias, productos, pedidos } = {
     pedidos:   '/api/pedidos'
 };
 
+//Llamamos las categorias.
+const getCategorias =  async()=>{
+
+    try {
+        
+        const resp = await fetch(`${ url }${ categorias }`);
+        
+        if ( resp.ok ) {
+            
+            const { categoria } = await resp.json();
+            console.log( categoria ) 
+
+        } else throw 'No se pusdo realizar la peticion';
+
+    } catch (error) {
+        
+        throw error;
+        
+    }
+
+   
+};
+
+
+export{
+    getCategorias
+}
