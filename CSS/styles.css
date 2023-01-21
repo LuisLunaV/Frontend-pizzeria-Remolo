@@ -79,6 +79,34 @@ img {
 .nombre-logo h4 span {
   color: #e54322;
 }
+
+/* Enlace a (anchor) del inicio de pedidos */
+.btn-dropdown{
+  color: #313130;
+  text-decoration: none;
+  font-family: var(--fuentePrincipal);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.btn-dropdown span{
+  color: #e54322;
+}
+
+.dropdown-menu{
+  background-color: white;
+  margin-top: .5rem;
+  padding: 2rem;
+  position: absolute;
+  z-index: 3;
+}
+
+.dropdown-item{
+text-decoration: none;
+font-family: var(--fuentePrincipal);
+font-size: 1.3rem;
+}
+
 /* Contenedor principal */
 .cuerpo {
   padding: 0 0 0 10rem;
