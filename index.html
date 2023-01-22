@@ -11,15 +11,33 @@
     />
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/modal.css" />
+    <link rel="stylesheet" href="assets/fontawesome-free-6.2.1-web/css/all.css">
     <title>DON REMOLO</title>
   </head>
   <body>
+
+     <!-- Modal -->
+     <div class="modal">
+       <div class="contenedor">
+        <header>
+          <div class="contenedor-titulo">
+            <label class="modal-header modal-titulo">¡Buen dia a todos!</label>
+          </div>
+          <div class="contenedor-close">
+            <i class="fas fa-times fa-2x btn-cerrar" id="X"></i>
+          </div>
+        </header>
+        <div class="contenido"></div>
+       </div>
+     </div>
+
+    <!-- Encabezado -->
     <header>
       <div class="nombre-logo">
         <img src="./assets/img/logo/logo.jpg" class="logo" alt="" />
         <h4>PIZZERÍA <span>DON REMOLO</span></h4>
       </div>
-
       <div class="dropdown">
         <a class="btn-dropdown" href="#">
           <span>INICIA TU PEDIDO,</span> AQUI
@@ -41,11 +59,12 @@
           class="dropdown-menu mostrar-elemento"
           aria-labelledby="dropdownMenuButton"
         >
-          <a class="dropdown-item" href="#">Agrega tus datos de entrega</a>
+          <a class="dropdown-item abrir-modal" href="#">Agrega tus datos de entrega</a>
         </div>
       </div>
     </header>
 
+    <!-- Informacion -->
     <main class="cuerpo">
       <div class="informacion-principal ancho-50">
         <h1>Recibe tu comida<br />sin necesidad<br />de salir de casa.</h1>
@@ -60,47 +79,11 @@
       </div>
     </main>
 
+    <!-- Categorias -->
     <section class="lista-categorias">
-      <ul class="ulList">
-<!-- 
-        <li class="item item-pizza">
-          <div class="img-categoria">
-            <img src="./assets/categorias/pizza.png" alt="img-pizza" />
-          </div>
-          <div class="nombre-categoria">
-            <p>Pizzas</p>
-          </div>
-        </li>
-
-        <li class="item item-bebida">
-          <div class="img-categoria">
-            <img src="./assets/categorias/bebida.png" alt="img-babida" />
-          </div>
-          <div class="nombre-categoria">
-            <p>Bebidas</p>
-          </div>
-        </li>
-
-        <li class="item item-postre">
-          <div class="img-categoria">
-            <img src="./assets/categorias/postre.png" alt="img-postre" />
-          </div>
-          <div class="nombre-categoria">
-            <p>Postres</p>
-          </div>
-        </li>
-
-        <li class="item item-empanada">
-          <div class="img-categoria">
-            <img src="./assets/categorias/empanada.png" alt="img-empanada" />
-          </div>
-          <div class="nombre-categoria">
-            <p>Empanadas</p>
-          </div>
-        </li> -->
-
-      </ul>
+      <ul class="ulList"></ul>
     </section>
+
     <script src="./JS/index.js" type="module"></script>
   </body>
 </html>

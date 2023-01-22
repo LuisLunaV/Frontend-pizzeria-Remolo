@@ -1,0 +1,72 @@
+:root {
+  --fuentePrincipal: "Montserrat", sans-serif;
+  --fuenteSecundaria: "Open Sans", sans-serif;
+}
+/* utilidades */
+.mostrar{ 
+    /* modal */
+    visibility: visible !important; 
+    opacity: 1 !important;
+}
+
+.tranform-0{
+    /* contenedor */
+    transform: translateY(0%) !important;
+}
+
+.modal-header{
+    font-family: var(--fuenteSecundaria);
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #fff;
+}
+/* general */
+.modal{
+    opacity: 0;
+    visibility: hidden;
+    background:  rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
+ 
+}
+
+.contenedor{
+    background: #fff;
+    width: 100%; /*auto */
+    height: 100%; /*auto */
+    max-width: 50rem;
+    max-height: 40rem;
+    transition: all 500ms ease;
+    transform: translateY(-20%);
+}
+
+.contenedor header{
+    height:5rem ;
+    overflow: hidden;
+    padding: 1rem 2.5rem;
+    background:#ff6000;
+}
+
+.contenedor-close{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-close i{
+    font-size: 2rem;
+    color: #fff;
+
+}
+.contenedor-close i:hover{
+    font-size: 2.3rem;
+    
+}
