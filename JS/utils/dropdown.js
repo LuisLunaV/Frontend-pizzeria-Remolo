@@ -4,11 +4,12 @@ const desplegar   = document.querySelector('.dropdown-menu'),
 
 const desplegarDropdown = () =>{
 btnDropdown.addEventListener('click', ()=>{
-    desplegar.classList.toggle('mostrar-dropdown')
-})
-}
+    desplegar.classList.toggle('mostrar-elemento')
+});
 
-desplegarDropdown()
+};
+
+desplegarDropdown();
 
 export{
 desplegarDropdown
