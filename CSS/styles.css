@@ -147,11 +147,12 @@ font-weight: 700;
   list-style: none;
   display: grid;
   grid-template-columns:repeat( 4, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   
 }
 
 .item {
+  cursor: pointer;
   overflow: hidden;
   /* Centramos los items dentro de la cuadricula del grid  "li"*/
   justify-self: center;
@@ -180,6 +181,7 @@ font-weight: 700;
 }
 
 .nombre-categoria p{
+  text-align: center;
   color: #313130;
   font-family: var(--fuenteSecundaria);
   font-weight: 700;

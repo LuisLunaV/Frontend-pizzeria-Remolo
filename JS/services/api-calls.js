@@ -19,7 +19,8 @@ const getCategorias =  async()=>{
         if ( resp.ok ) {
             
             const { categoria } = await resp.json();
-            console.log( categoria ) 
+            
+            return categoria;
 
         } else throw 'No se pusdo realizar la peticion';
 
