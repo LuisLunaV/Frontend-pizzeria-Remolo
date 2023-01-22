@@ -4,7 +4,7 @@ const ulList = document.querySelector(".ulList");
 
 const htmlCategorias = ({ Categoria_Id, Categoria_Descripcion }) => {
   
-    const html = `<li class="item item-pizza">
+    const html = `<li class="item item-pizza" data-value="${ Categoria_Id }">
     <div class="img-categoria">
       <img src="./assets/categorias/${ Categoria_Descripcion }.png" alt="img-pizza" />
     </div>
