@@ -23,6 +23,7 @@
 /* general */
 .modal{
     opacity: 0;
+    /* hiden */
     visibility: hidden;
     background:  rgba(0,0,0,0.5);
     height: 100%;
@@ -70,3 +71,78 @@
     font-size: 2.3rem;
     
 }
+
+/* Formularios */
+
+.contenido-modal{
+    padding: 0 1.7rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* border: .2rem solid red; */
+}
+
+.form-registro-cli{
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-contenedor-cli{
+    padding-bottom: 1.7rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div-contenedor-cli input{
+    width: 100%;
+    height: 3rem;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: .2rem solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.div-contenedor-cli label{
+margin-bottom: .3rem;
+font-family: var(--fuenteSecundaria);
+font-weight: 600;
+font-size: 1.5rem;
+}
+
+.div-contenedor-cli input:hover {
+    outline: none;
+    border-color: #05060f;
+  }
+
+  .div-btn-cliente{
+    height: auto;
+    /* margin-top: 1.7rem; */
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-crear-cliente{
+    cursor: pointer;
+    border: .2rem solid #ff6000;
+    border-radius: .5rem;
+    background-color: #fff;
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 100%;
+    height: 4rem;
+    transition: 200ms linear;
+  }
+
+  .btn-crear-cliente:hover{
+    color: #fff;
+    background-color: #ff6000;
+    border: .2rem solid #fff;
+
+  }

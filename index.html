@@ -28,7 +28,29 @@
             <i class="fas fa-times fa-2x btn-cerrar" id="X"></i>
           </div>
         </header>
-        <div class="contenido"></div>
+        <div class="contenido-modal">
+
+          <!-- Fomularios -->
+          <form class="form-registro-cli">
+            <div class=" div-contenedor-cli nombre-cliente">
+              <label for="nombre-cliente">Nombre completo</label>
+              <input type="text" name="Usuario_Nombre" id="nombre-cliente" required>
+            </div>
+            <div class="div-contenedor-cli telefono_cli">
+              <label for="telefono-cliente">Numero de contacto</label>
+              <input type="tel" name="Usuario_Telefono" id="telefono-cliente" pattern="[0-9]*" required> <!--pattern="\d*"-->
+            </div>
+            <div class="div-contenedor-cli direccion_cli">
+              <label for="direccion-cliente">Direccion de entrega</label>
+              <input type="text" name="Usuario_Direccion" id="direccion-cliente" required>
+            </div>
+
+            <div class="div-btn-cliente">
+              <input class="btn-crear-cliente" type="submit" value="Guardar" />
+            </div>
+          </form>
+
+        </div>
        </div>
      </div>
 
