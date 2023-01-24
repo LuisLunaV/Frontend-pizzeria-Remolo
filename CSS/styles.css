@@ -250,8 +250,8 @@ img {
 @media (min-width: 768px){ 
 
 .lista-categorias {
-  padding-top: 8rem;
-  height: 19.5vh;
+  padding: 4rem 0;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,7 +350,9 @@ img {
 
 @media (min-width: 1224PX){ 
   .lista-categorias{
-    padding-top: 0;
+    padding: 0;
+    height: 19.5vh;
+
   }
 
   .lista-categorias ul{
