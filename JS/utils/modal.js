@@ -1,6 +1,7 @@
 const dropdownMenu = document.querySelector('.dropdown-menu'),
              modal = document.querySelector('.modal'),
-   modalContenedor = document.querySelector('.contenedor');
+   modalContenedor = document.querySelector('.contenedor'),
+btnInputResponsive = document.querySelector('.btn-input-responsive');
 
 const mostrarModal =()=>{
     dropdownMenu.addEventListener('click',( event )=>{ 
@@ -14,6 +15,11 @@ const mostrarModal =()=>{
         document.querySelector('.dropdown-menu').classList.add('mostrar-elemento');
         
         //mostramos la venta modal
+        modal.classList.add('mostrar');
+        modalContenedor.classList.add('tranform-0');
+    });
+
+    btnInputResponsive.addEventListener('click',()=>{
         modal.classList.add('mostrar');
         modalContenedor.classList.add('tranform-0');
     });
