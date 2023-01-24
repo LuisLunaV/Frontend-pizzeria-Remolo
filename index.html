@@ -20,7 +20,7 @@
      <!-- Modal -->
      <div class="modal">
        <div class="contenedor">
-        <header>
+        <header class="header-normal">
           <div class="contenedor-titulo">
             <label class="modal-header modal-titulo">¡Buen dia a todos!</label>
           </div>
@@ -29,7 +29,6 @@
           </div>
         </header>
         <div class="contenido-modal">
-
           <!-- Fomularios -->
           <form class="form-registro-cli">
             <div class=" div-contenedor-cli nombre-cliente">
@@ -38,7 +37,7 @@
             </div>
             <div class="div-contenedor-cli telefono_cli">
               <label for="telefono-cliente">Numero de contacto</label>
-              <input type="tel" name="Usuario_Telefono" id="telefono-cliente" pattern="[0-9]*" required> <!--pattern="\d*"-->
+              <input type="tel" name="Usuario_Telefono" id="telefono-cliente" pattern="[0-9]*" required> 
             </div>
             <div class="div-contenedor-cli direccion_cli">
               <label for="direccion-cliente">Direccion de entrega</label>
@@ -49,13 +48,13 @@
               <input class="btn-crear-cliente" type="submit" value="Guardar" />
             </div>
           </form>
-
-        </div>
+        </div> 
        </div>
      </div>
 
     <!-- Encabezado -->
-    <header>
+
+    <header class="header-normal">
       <div class="nombre-logo">
         <img src="./assets/img/logo/logo.jpg" class="logo" alt="" />
         <h4>PIZZERÍA <span>DON REMOLO</span></h4>
@@ -88,6 +87,12 @@
 
     <!-- Informacion -->
     <main class="cuerpo">
+      <!-- Boton responsive -->
+       <div class="btn-responsive">
+        <input class="" type="button" value="Iniciar pedido">
+       </div>
+      <!-- ******************** -->
+
       <div class="informacion-principal ancho-50">
         <h1>Recibe tu comida<br />sin necesidad<br />de salir de casa.</h1>
         <p class="p-large">
@@ -98,6 +103,9 @@
       </div>
       <div class="imagen-principal ancho-50">
         <img src="./assets/img/bici-uno-sinfondo.png" alt="" />
+      </div>
+      <div class="imagen-principal-responsive ancho-50">
+        <img src="./assets/img/logo/logo.png" alt="" />
       </div>
     </main>
 
