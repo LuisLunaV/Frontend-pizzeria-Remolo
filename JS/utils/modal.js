@@ -15,13 +15,12 @@ const mostrarModal =()=>{
         document.querySelector('.dropdown-menu').classList.add('mostrar-elemento');
         
         //mostramos la venta modal
-        modal.classList.add('mostrar');
-        modalContenedor.classList.add('tranform-0');
+        agregarClasesDelModal();
     });
 
+    //mostrar ventana modal con el boton responsive
     btnInputResponsive.addEventListener('click',()=>{
-        modal.classList.add('mostrar');
-        modalContenedor.classList.add('tranform-0');
+        agregarClasesDelModal();
     });
 };
 
@@ -35,6 +34,12 @@ const ventanaModal =()=>{
             modalContenedor.classList.remove('tranform-0');
            }
     });
+};
+
+//Agregamos las clases para mostrar el contenedor del modal
+const agregarClasesDelModal =()=>{
+    modal.classList.add('mostrar');
+    modalContenedor.classList.add('tranform-0');
 };
 
 export{
