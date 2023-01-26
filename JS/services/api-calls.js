@@ -9,7 +9,10 @@ const { usuarios, categorias, productos, pedidos } = {
     pedidos:   '/api/pedidos'
 };
 
-//Llamamos las categorias.
+
+/**
+ * Llamamos todas las categorias almacenadas en la BD.
+ */
 const getCategorias =  async()=>{
 
     try {
@@ -35,17 +38,33 @@ const getCategorias =  async()=>{
 
 /**
  * Obtenemos los productos relacionados por el id de la categoria enviada.
+ * Implementamos el almacenamiento en cache para mejorar el rendimiento
+ * en la aplicacion, y asi evitar las peticiones inecesarias al servidor.
  */
 
 const getProductos = async( id ) =>{
+ 
+    // Primero, verificamos si el producto ya se encuentra en la caché
+    let producto = localStorage.getItem(`producto-${id}`);
+    
+    if(producto){
+
+        // Si el producto ya se encuentra en la caché, lo devolvemos
+        return JSON.parse(producto);
+    } 
+
     try {
+ 
         const resp = await fetch(`${ url }${ productos }/${ id }`);
         
         if( resp.ok ){
-        
-            const { producto } = await resp.json();
-    
-            return producto;
+         // Si la petición al servidor es exitosa, almacenamos el producto en la caché
+            const data = await resp.json();
+            
+            localStorage.setItem(`producto-${id}`,
+            JSON.stringify( data ));
+
+            return data;
         
         } else throw new Error('No se pudo realizar la peticion');
     
