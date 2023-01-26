@@ -33,7 +33,29 @@ const getCategorias =  async()=>{
    
 };
 
+/**
+ * Obtenemos los productos relacionados por el id de la categoria enviada.
+ */
 
+const getProductos = async( id ) =>{
+    try {
+        const resp = await fetch(`${ url }${ productos }/${ id }`);
+        
+        if( resp.ok ){
+        
+            const { producto } = await resp.json();
+    
+            return producto;
+        
+        } else throw new Error('No se pudo realizar la peticion');
+    
+    } catch (error) {
+    
+        throw error;
+    
+    }
+}
 export{
-    getCategorias
+    getCategorias,
+    getProductos
 }

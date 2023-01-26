@@ -1,5 +1,7 @@
 import { getCategorias } from "../index.js";
-
+/**
+ * Imprimimos las categorias registradas en la BD
+ */
 const ulList = document.querySelector(".ulList");
 
 const htmlCategorias = ({ Categoria_Id, Categoria_Descripcion }) => {
@@ -21,17 +23,7 @@ const obtenerCategorias = async () => {
 
   const categoria = await getCategorias();
 
-  categoria.forEach((categoria)=>{
-    /*  
-    Si existe registro del cliente en localstorage mostrar las categorias,
-    si no, no hagas nada.
-    */ 
-  //  if( !localStorage.getItem('cliente') ) return;
-   
-   /* Imprimimos las categorias*/ 
-    htmlCategorias(categoria)
-
-  });
+  categoria.forEach( htmlCategorias );
 };
 
 export { obtenerCategorias };
