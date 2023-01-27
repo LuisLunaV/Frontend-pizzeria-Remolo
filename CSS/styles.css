@@ -18,6 +18,7 @@ body {
   line-height: 1.5;
 }
 /* Utilidades */
+
 .mostrar-elemento {
   display: none;
 }
@@ -34,6 +35,12 @@ body {
 }
 
 @media (min-width: 768px) {
+  .centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .ancho-50 {
     width: 50%;
   }

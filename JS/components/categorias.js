@@ -21,7 +21,7 @@ const htmlCategorias = ({ Categoria_Id, Categoria_Descripcion }) => {
 
 const obtenerCategorias = async () => {
 
-  const categoria = await getCategorias();
+  const { categoria} = await getCategorias();
 
   categoria.forEach( htmlCategorias );
 };

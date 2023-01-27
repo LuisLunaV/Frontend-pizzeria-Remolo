@@ -12,18 +12,28 @@ const { usuarios, categorias, productos, pedidos } = {
 
 /**
  * Llamamos todas las categorias almacenadas en la BD.
+ * Implementamos el alamacenamiento en cache
  */
 const getCategorias =  async()=>{
+
+    // Primero, verificamos si el producto ya se encuentra en la caché
+    let categoias = localStorage.getItem( 'categorias' );
+
+    if( categoias ){
+        // Si el producto ya se encuentra en la caché, lo devolvemos
+       return JSON.parse( categoias );
+    }
 
     try {
         
         const resp = await fetch(`${ url }${ categorias }`);
         
         if ( resp.ok ) {
+         // Si la petición al servidor es exitosa, almacenamos el producto en la caché.
+            const data = await resp.json();
+            localStorage.setItem('categorias', JSON.stringify( data ))
             
-            const { categoria } = await resp.json();
-            
-            return categoria;
+            return data;
 
         } else throw 'No se pusdo realizar la peticion';
 
@@ -58,11 +68,9 @@ const getProductos = async( id ) =>{
         const resp = await fetch(`${ url }${ productos }/${ id }`);
         
         if( resp.ok ){
-         // Si la petición al servidor es exitosa, almacenamos el producto en la caché
+         // Si la petición al servidor es exitosa, almacenamos el producto en la caché.
             const data = await resp.json();
-            
-            localStorage.setItem(`producto-${id}`,
-            JSON.stringify( data ));
+            localStorage.setItem(`producto-${id}`, JSON.stringify( data ));
 
             return data;
         
