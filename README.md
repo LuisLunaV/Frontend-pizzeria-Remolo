@@ -10,4 +10,4 @@ Se requiere un menu intuitivo y simple de usar para realizar pedidos via whatssa
 -El pedido puede realizar su checkout sin pago ni envío de por medio Se debe aclarar que es sólo en efectivo y con delivery propio del negocio. <br>
 -En el checkout se crea un texto automático que se envía al whatsapp del local. <br>
 
-## Nuevo
+## Nuevos
