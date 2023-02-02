@@ -1,7 +1,10 @@
+  // Elementos del dropdown y el boton principal responsive
   const dropdownMenu = document.querySelector(".dropdown-menu"),
-        modal        = document.querySelector(".modal"),
-     modalContenedor = document.querySelector(".contenedor"),
-  btnInputResponsive = document.querySelector(".btn-input-responsive");
+        btnInputResponsive = document.querySelector(".btn-input-responsive");
+
+  // Elementos del modal productos
+  const modalDeProductos   = document.querySelector(".modal-productos"),
+  modalContenedorProductos = document.querySelector(".contenedor-productos");
 
 /**
  * Nos ayuda a mostrar los items del dropdown, y los pedidos almacenados.
@@ -33,14 +36,14 @@ const verPedidos = () => {
  */
 const ventanaModal = () => {
 
-  modal.addEventListener("click", (event) => {
+  modalDeProductos.addEventListener("click", (event) => {
 
     const elemento = event.target,
        cerrarModal = elemento.id;
 
     if (cerrarModal === "X") {
-      modal.classList.remove("mostrar");
-      modalContenedor.classList.remove("tranform-0");
+      modalDeProductos.classList.remove("mostrar");
+      modalContenedorProductos.classList.remove("tranformX-0");
     }
   });
 };
@@ -49,8 +52,8 @@ const ventanaModal = () => {
  * Agregamos las clases para mostrar el contenedor del modal.
  */
 const abrirModal = () => {
-  modal.classList.add("mostrar");
-  modalContenedor.classList.add("tranform-0");
+  modalDeProductos.classList.add("mostrar");
+  modalContenedorProductos.classList.add("tranformX-0");
 };
 
 export { abrirModal, verPedidos, ventanaModal };

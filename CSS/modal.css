@@ -14,6 +14,10 @@
     transform: translateY(0%) !important;
 }
 
+.tranformX-0{
+    transform: translateX(0%) !important;
+}
+
 .modal-header{
     font-family: var(--fuenteSecundaria);
     font-weight: 600;
@@ -36,7 +40,6 @@
     justify-content: center;
     align-items: center;
     transition: all 500ms ease;
- 
 }
 
 .contenedor{
@@ -148,3 +151,48 @@ font-size: 1.5rem;
     border: .2rem solid #fff;
 
   }
+
+
+  /* Modal de los productos */
+.modal-productos{
+    opacity: 0;
+    visibility: hidden;
+    background:  rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms ease;
+
+}
+
+.contenedor-productos{
+    overflow: scroll;
+    background: #fff;
+    width: 50rem; /*auto */
+    height: 60rem; /*auto */
+    transition: all 500ms ease;
+    transform: translateX(-50%);
+}
+
+.contenedor-close-producto{
+    cursor: pointer;
+    z-index: 3;
+    position: sticky;
+    top: 3rem;
+
+    padding-right: 2.5rem;
+    display: flex;
+    justify-content: end;
+}
+
+/* .productos{
+    padding-top: 1rem;
+} */
+
+/**********************/
