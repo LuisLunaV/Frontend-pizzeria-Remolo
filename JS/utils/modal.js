@@ -1,16 +1,15 @@
-  // Elementos del dropdown y el boton principal responsive
-  const dropdownMenu = document.querySelector(".dropdown-menu"),
-        btnInputResponsive = document.querySelector(".btn-input-responsive");
+// Elementos del dropdown y el boton principal responsive
+const dropdownMenu = document.querySelector(".dropdown-menu"),
+  btnInputResponsive = document.querySelector(".btn-input-responsive");
 
-  // Elementos del modal productos
-  const modalDeProductos   = document.querySelector(".modal-productos"),
+// Elementos del modal productos
+const modalDeProductos = document.querySelector(".modal-productos"),
   modalContenedorProductos = document.querySelector(".contenedor-productos");
 
 /**
  * Nos ayuda a mostrar los items del dropdown, y los pedidos almacenados.
  */
 const verPedidos = () => {
-
   dropdownMenu.addEventListener("click", (event) => {
     //El elemento contiene la clase "abrir-modal" True o False
     const mostrarPedidos = event.target.classList.contains("abrir-modal");
@@ -35,11 +34,9 @@ const verPedidos = () => {
  *Esta funcion nos ayudara a manejar todos los eventos, de los elementos, dentro de la ventana modal.
  */
 const ventanaModal = () => {
-
   modalDeProductos.addEventListener("click", (event) => {
-
     const elemento = event.target,
-       cerrarModal = elemento.id;
+      cerrarModal = elemento.id;
 
     if (cerrarModal === "X") {
       modalDeProductos.classList.remove("mostrar");
