@@ -1,21 +1,42 @@
+:root {
+    --fuentePrincipal: "Montserrat", sans-serif;
+    --fuenteSecundaria: "Open Sans", sans-serif;
+  }
+
 .card {
-    width: 190px;
-    height: 254px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-width: 40rem;
     padding: .8em;
     background: #f5f5f5;
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
    }
    
    .card-img {
-    background-color: #ffcaa6;
-    height: 40%;
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height: auto;
     border-radius: .5rem;
     transition: .3s ease;
+
    }
    
+   @media (min-width: 420px){
+
+    .card{
+        flex-direction: row;
+       
+    }
+
+    .card-img{
+    margin-right: 2rem;
+        max-width: 50%;
+    }
+   }
    .card-info {
     padding-top: 10%;
    }
@@ -36,14 +57,16 @@
    
    /*Text*/
    .text-title {
-    font-weight: 900;
-    font-size: 1.2em;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 700;
+    font-size: 1.5em;
     line-height: 1.5;
    }
    
    .text-body {
-    font-size: .9em;
-    padding-bottom: 10px;
+    font-family: var(--fuenteSecundaria);
+    font-size: 1rem;
+    padding-bottom: 1rem;
    }
    
    /*Button*/
@@ -57,10 +80,6 @@
    }
    
    /*Hover*/
-   .card-img:hover {
-    transform: translateY(-25%);
-    box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
-   }
    
    .card-button:hover {
     border: 1px solid #ffcaa6;
