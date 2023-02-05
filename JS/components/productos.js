@@ -48,6 +48,10 @@ const imprimirProducto = async (id) => {
   /**
    * Utilizamos una estructura de datos tipo dicionarioa para agregar los precios a
    * los productos.
+   * Este código crea un mapa con los precios asociados a cada identificador de 
+   * producto, y luego utiliza el método map para recorrer el arreglo de productos y 
+   * agregar el precio correspondiente a cada producto en el nuevo arreglo 
+   * productosConPrecio.
    */
   const mapPrecios = await precio.reduce((map, precio)=>{
     map[precio.Precio_ProdID] = precio.Precio_Unitario;
