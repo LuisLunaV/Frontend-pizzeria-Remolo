@@ -2,11 +2,12 @@
 const url = 'https://backend-pizzeria-remolo-production.up.railway.app';
 
 //Guardamos en un objeto las rutas que vamos a utilizar en la api.
-const { usuarios, categorias, productos, pedidos } = {
+const { usuarios, categorias, productos, pedidos, precios } = {
     usuarios:  '/api/usuarios',
     categorias:'/api/categorias',
     productos: '/api/productos',
-    pedidos:   '/api/pedidos'
+    pedidos:   '/api/pedidos',
+    precios:   '/api/precios'
 };
 
 
@@ -17,11 +18,11 @@ const { usuarios, categorias, productos, pedidos } = {
 const getCategorias =  async()=>{
 
     // Primero, verificamos si el producto ya se encuentra en la caché
-    let categoias = localStorage.getItem( 'categorias' );
+    const categoria = localStorage.getItem( 'categorias' );
 
-    if( categoias ){
+    if( categoria ){
         // Si el producto ya se encuentra en la caché, lo devolvemos
-       return JSON.parse( categoias );
+       return JSON.parse( categoria );
     }
 
     try {
@@ -55,7 +56,7 @@ const getCategorias =  async()=>{
 const getProductos = async( id ) =>{
  
     // Primero, verificamos si el producto ya se encuentra en la caché
-    let producto = localStorage.getItem(`producto-${id}`);
+    const producto = localStorage.getItem(`producto-${id}`);
     
     if(producto){
 
@@ -82,7 +83,35 @@ const getProductos = async( id ) =>{
     
     }
 }
+
+/**
+ * Llamamos la informacion de la tabla precios de los productos
+ */
+
+const getPrecios = async() => {
+    
+    const precio = localStorage.getItem('precios')
+
+    if( precio ) return JSON.parse( precio );
+
+    try {
+        const resp = await fetch(`${ url }${ precios }`);
+
+        if( resp.ok ){
+            const data = await resp.json();
+
+            localStorage.setItem('precios', JSON.stringify( data ));
+
+            return data;
+        }
+        
+    } catch (error) {
+        throw error
+    }
+};
+
 export{
     getCategorias,
-    getProductos
+    getProductos,
+    getPrecios
 }

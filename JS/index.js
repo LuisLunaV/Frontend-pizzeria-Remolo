@@ -9,7 +9,7 @@ import { imprimirProducto }   from './components/productos.js';
 import { imprimirFormulario } from './components/formulario.js';
 
 //servicios de la api
-import { getCategorias, getProductos } from "./services/api-calls.js";
+import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
 export{
 abrirModal,
@@ -18,7 +18,8 @@ imprimirFormulario,
 listaDeCategorias,
 desplegarDropdown,
 getCategorias,
-getProductos
+getProductos,
+getPrecios
 }
 
 //Componentes

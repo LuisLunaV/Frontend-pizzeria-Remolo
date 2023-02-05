@@ -4,9 +4,10 @@
 }
 
 .card {
+    margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 75%;
   height: auto;
   max-width: 40rem;
   padding: 0.8em;
@@ -17,6 +18,7 @@
 }
 
 .card-img {
+    /* align-self: center; */
   max-width: 100%;
   overflow: hidden;
   height: auto;
@@ -29,11 +31,19 @@
     flex-direction: row;
   }
 
+  .card-contenido{
+    width: 40%;
+  }
+
   .card-img {
     margin-right: 2rem;
     max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
+
 .card-info {
   padding-top: 10%;
 }
