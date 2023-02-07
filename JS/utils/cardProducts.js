@@ -1,12 +1,19 @@
 
 const tarjetaProductos =()=>{
 
-    const containerButtons = document.querySelector('.card-agregar-pedido');
-    const cantidadProducto = document.querySelector('.cantidad-span');
+    const containerButtons = document.querySelectorAll('.card-agregar-pedido');
+    
+    /**
+     * Realizamos un forEach para seleccionar todas las tarjetas con la clase '.card-agregar-pedido'
+     * y agregarle el evento 'Click' a cada una de ellas.
+     */
+    containerButtons.forEach( tarjeta =>{
+
+    const cantidadProducto = tarjeta.querySelector('.cantidad-span');
 
     let contador = 0;
 
-    containerButtons.addEventListener('click',( event )=>{
+    tarjeta.addEventListener('click',( event )=>{
         const plusMinus = event.target.closest('.button-card');
         
         if( plusMinus ){
@@ -29,6 +36,8 @@ const tarjetaProductos =()=>{
 
 
     });
+    })
+
 }
 
 
