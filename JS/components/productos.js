@@ -1,4 +1,4 @@
-import { getProductos, getPrecios } from "../index.js";
+import { getProductos, getPrecios, tarjetaProductos } from "../index.js";
 
 const modal = document.querySelector(".productos");
 
@@ -84,6 +84,13 @@ const imprimirProducto = async (id) => {
    */
   productosConPrecio.forEach( htmlProducto );
 
+  /**
+   * Ejecutamos las funciones de la tarjeta del producto, catntidad de productos
+   * y agregar el producto al carrito.
+   *Utils/cardProducts.js
+   */
+  
+  tarjetaProductos();
 };
 
 export { imprimirProducto };

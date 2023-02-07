@@ -2,6 +2,7 @@
 import { desplegarDropdown } from "./utils/dropdown.js";
 import { listaDeCategorias } from './utils/menuCategorias.js';
 import { verPedidos, ventanaModal, abrirModal } from './utils/modal.js';
+import { tarjetaProductos } from './utils/cardProducts.js';
 
 //Componentes
 import { obtenerCategorias }  from './components/categorias.js';
@@ -12,6 +13,7 @@ import { imprimirFormulario } from './components/formulario.js';
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
 export{
+tarjetaProductos,
 abrirModal,
 imprimirProducto,
 imprimirFormulario,
@@ -26,4 +28,3 @@ getPrecios
 obtenerCategorias();
 verPedidos();
 ventanaModal();
-
