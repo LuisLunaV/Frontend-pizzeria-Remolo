@@ -1,6 +1,8 @@
 :root {
   --fuentePrincipal: "Montserrat", sans-serif;
   --fuenteSecundaria: "Open Sans", sans-serif;
+  --border:.5px solid #CACFD2;
+
 }
 
 .card {
@@ -77,18 +79,67 @@ svg {
 }
 
 /*Button*/
-.card-button {
-  border: 1px solid #252525;
+
+.card-agregar-pedido{
   display: flex;
-  padding: 0.3em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+.card-button{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+
+ .border-box{
+  cursor: pointer;   
+  border: var(--border);
+
+ }
+
+ .border-span{
+  font-family: var(--fuenteSecundaria);
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-top: var(--border);
+  border-bottom: var(--border);
+ }
+
+ .caja{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  max-height: 100%;
+  max-width: 100%;
+  /* padding: 1rem; */
+ }
+
+ .caja i{
+  margin-top: .3rem;
+ }
+ 
+ .card-button-agregar{
+  margin-top: .2rem;
+  width: 100% ;
+ }
+
+ .card-button-agregar input{
   cursor: pointer;
-  border-radius: 50px;
-  transition: 0.3s ease-in-out;
-}
+  color: white;
+  background-color: #fd7e14;
+  border-radius: .4em;
+  border: .2rem solid white;
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: .5rem 0;
+  width: 100%;
+ }
 
-/*Hover*/
-
-.card-button:hover {
-  border: 1px solid #ffcaa6;
-  background-color: #ffcaa6;
-}
+ .card-button-agregar input:hover{
+  background-color: #FF7F50;
+ }
