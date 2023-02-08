@@ -51,11 +51,20 @@ const tarjetaProductos =()=>{
             const agregar = producto.filter( producto => {
             
             if( prodID == producto.Prod_id){
-                console.log(producto)
+                
+                return producto;
             }
            });
 
-           console.log(agregar)
+
+           const guardarProducto =  agregar.map(index =>{
+            return{
+                ...index,
+                cantidad:contador
+            }
+           })
+
+           console.log( guardarProducto )
 
         }
 
