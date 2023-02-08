@@ -2,14 +2,14 @@ import { getProductos, getPrecios, tarjetaProductos } from "../index.js";
 
 const modal = document.querySelector(".productos");
 
-const htmlProducto = ({ Prod_Nombre, Prod_Descripcion, Prod_imagen, precio_Unitario }) => {
+const htmlProducto = ({Prod_id, Prod_Nombre, Prod_categoriaID, Prod_Descripcion, Prod_imagen, precio_Unitario }) => {
   const html = `
-    <div class="card">
-    <div class="card-img">
-      <img src="${Prod_imagen}" alt="">
+    <div class="card" data-value='${ Prod_categoriaID }'>
+    <div class="card-img" >
+      <img src="${Prod_imagen}" alt="img_producto">
     </div>
 
-    <div class="card-contenido">
+    <div class="card-contenido" data-value='${ Prod_id }'>
     <div class="card-info">
       <p class="text-title">${Prod_Nombre}</p>
       <p class="text-body">${Prod_Descripcion}</p>
@@ -33,7 +33,7 @@ const htmlProducto = ({ Prod_Nombre, Prod_Descripcion, Prod_imagen, precio_Unita
     </div>
 
     <div class="card-button-agregar">
-      <input type="button" value="Agregar" />
+      <input class='button-agregar' type="button" value="Agregar" />
     </div>
 
   </div>
