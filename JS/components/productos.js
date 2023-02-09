@@ -24,7 +24,7 @@ const htmlProducto = ({Prod_id, Prod_Nombre, Prod_categoriaID, Prod_Descripcion,
     </div>
     
     <div class="caja border-span">
-      <span class="cantidad-span">0</span>
+      <span class="cantidad-span">1</span>
     </div>
 
     <div class="caja border-box button-card" data-value="-">
