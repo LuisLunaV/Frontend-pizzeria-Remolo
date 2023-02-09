@@ -1,4 +1,4 @@
-
+import { pedido } from '../index.js';
 const tarjetaProductos =()=>{
 
     const cardProducto = document.querySelectorAll('.card');
@@ -88,9 +88,11 @@ const tarjetaProductos =()=>{
                 ...index,
                 PD_Cantidad:contador
             }
-           })
+           });
 
-           console.log( guardarProducto )
+           pedido.nuevoPedido( guardarProducto );
+
+        //    console.log( guardarProducto )
 
         }
 

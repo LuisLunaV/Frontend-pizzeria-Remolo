@@ -1,3 +1,6 @@
+//Clase Lista de pedidos
+import { PedidosLista } from '../class/pedidos-lista.class.js';
+
 // Utilidades o funciones de los componentes
 import { desplegarDropdown } from "./utils/dropdown.js";
 import { listaDeCategorias } from './utils/menuCategorias.js';
@@ -13,6 +16,7 @@ import { imprimirFormulario } from './components/formulario.js';
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
 export{
+pedido,
 tarjetaProductos,
 abrirModal,
 imprimirProducto,
@@ -28,3 +32,7 @@ getPrecios
 obtenerCategorias();
 verPedidos();
 ventanaModal();
+
+//Class
+const pedido = new PedidosLista(); 
+pedido.verPedido();
