@@ -97,6 +97,7 @@ const tarjetaProductos =()=>{
             */
            const [ productoGuardado ] = guardarProducto;
            
+           //Creamos nuestro pedido.
            pedido.nuevoPedido( productoGuardado );
 
 

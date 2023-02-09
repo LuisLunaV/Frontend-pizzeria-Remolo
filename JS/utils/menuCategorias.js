@@ -9,6 +9,9 @@ listaDeCategorias.addEventListener('click', async( event )=>{
 
     const dataValue = event.target.closest('.item-pizza').dataset.value;
     abrirModal();
+    /**
+     * Mostramos los productos relacionados al ID de la categoria.
+     */
     imprimirProducto( dataValue );
     
 });
