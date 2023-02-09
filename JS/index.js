@@ -35,4 +35,5 @@ ventanaModal();
 
 //Class
 const pedido = new PedidosLista(); 
-pedido.verPedido();
+
+console.log(pedido)

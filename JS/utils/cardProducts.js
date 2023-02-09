@@ -90,9 +90,15 @@ const tarjetaProductos =()=>{
             }
            });
 
-           pedido.nuevoPedido( guardarProducto );
+           /**
+            * Realizamos una destructuracion de arreglos para obtener el primer elemento del mismo,
+            * y lo guardamos en la constante "productoGuardado".
+            * Equivale a: const productoGuardado = guardarProducto[0]; 
+            */
+           const [ productoGuardado ] = guardarProducto;
+           
+           pedido.nuevoPedido( productoGuardado );
 
-        //    console.log( guardarProducto )
 
         }
 

@@ -1,15 +1,29 @@
 export class PedidosLista{
 
     constructor(){
-        this.pedidos = [];
+
+        this.cargarLocalStorage();
+    
     }
     
     nuevoPedido( pedido ){
-        console.log(pedido)
+
         this.pedidos.push( pedido );
+        this.guardarLocalStorage();
+    
     }
 
-    verPedido(){
-        
+    guardarLocalStorage(){
+
+        localStorage.setItem('pedidos', JSON.stringify( this.pedidos ));
+   
     }
-}
+
+    cargarLocalStorage(){
+
+        this.pedidos = (localStorage.getItem('pedidos'))
+        ? JSON.parse(localStorage.getItem('pedidos'))
+        : [];
+
+    }
+};
