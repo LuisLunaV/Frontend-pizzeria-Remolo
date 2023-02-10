@@ -1,3 +1,5 @@
+//index
+import { pedido } from '../index.js';
 //Clase Lista de pedidos
 import { PedidosLista } from '../class/pedidos-lista.class.js';
 
@@ -19,9 +21,9 @@ import { imprimirProducto } from './helpers/imprimirProducto.js';
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
 export{
+pedido,
 PedidosLista,
 htmlProducto,
-pedido,
 tarjetaProductos,
 abrirModal,
 imprimirProducto,
@@ -30,15 +32,13 @@ listaDeCategorias,
 desplegarDropdown,
 getCategorias,
 getProductos,
-getPrecios
+getPrecios,
+obtenerCategorias,
+verPedidos,
+ventanaModal,
 }
 
-//Componentes
-obtenerCategorias();
-verPedidos();
-ventanaModal();
 
-//Class
-const pedido = new PedidosLista(); 
+
 
 
