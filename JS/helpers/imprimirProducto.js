@@ -43,12 +43,10 @@ const imprimirProducto = async (id) => {
     productosConPrecio.forEach( htmlProducto );
   
     /**
-     * Ejecutamos las funciones de la tarjeta del producto, catntidad de productos
-     * y agregar el producto al carrito.
-     *Utils/cardProducts.js
+     * Ejecutamos las funciones de la tarjeta del producto, catntidad de productos (Botones: "+", "-")
+     * y agregar el producto al carrito (Boton: "Agregar").  // Utils/cardProducts.js
      */
-    
-    tarjetaProductos();
+     tarjetaProductos();
   };
   
 export{
