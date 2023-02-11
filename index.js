@@ -6,8 +6,4 @@ verPedidos();
 ventanaModal();
 
 //Class
-const pedido = new PedidosLista();
-
-export{
-    pedido
-}
+export const pedido = new PedidosLista();
