@@ -1,3 +1,4 @@
+import { imprimirPedido } from '../index.js';
 // Elementos del dropdown y el boton principal responsive
 const dropdownMenu = document.querySelector(".dropdown-menu"),
   btnInputResponsive = document.querySelector(".btn-input-responsive");
@@ -16,11 +17,12 @@ const verPedidos = () => {
 
     //Si el elemento es false no hagas nada.
     if (!mostrarPedidos) return;
-
+   
     // ocultamos el menu dropdown
     document.querySelector(".dropdown-menu").classList.add("mostrar-elemento");
 
     //mostramos la venta modal
+    imprimirPedido();
     abrirModal();
   });
 

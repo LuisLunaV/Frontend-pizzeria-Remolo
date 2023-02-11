@@ -5,13 +5,7 @@ const desplegar   = document.querySelector('.dropdown-menu'),
 const desplegarDropdown = () =>{
 btnDropdown.addEventListener('click', ()=>{
     desplegar.classList.toggle('mostrar-elemento');
-    
-    /**
-     * Imprimiremos la los itemes de los pedidos guardados en el localstorage.
-     */
-  
 });
-
 };
 
 desplegarDropdown();

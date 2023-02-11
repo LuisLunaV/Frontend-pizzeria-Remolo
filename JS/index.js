@@ -4,7 +4,7 @@ import { pedido } from '../index.js';
 import { PedidosLista } from '../class/pedidos-lista.class.js';
 
 // Utilidades o funciones de los componentes
-import { desplegarDropdown } from "./utils/dropdown.js";
+import { desplegarDropdown } from "./utils/desplegarDropdown.js";
 import { listaDeCategorias } from './utils/menuCategorias.js';
 import { verPedidos, ventanaModal, abrirModal } from './utils/modal.js';
 import { tarjetaProductos } from './utils/cardProducts.js';
@@ -16,7 +16,7 @@ import { imprimirFormulario } from './components/formulario.js';
 
 //Helpers
 import { imprimirProducto } from './helpers/imprimirProducto.js';
-
+import { imprimirPedido } from './helpers/imprimirPedidos.js';
 //servicios de la api
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
@@ -26,6 +26,7 @@ PedidosLista,
 htmlProducto,
 tarjetaProductos,
 abrirModal,
+imprimirPedido,
 imprimirProducto,
 imprimirFormulario,
 listaDeCategorias,
