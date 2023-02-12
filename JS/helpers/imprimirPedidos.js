@@ -1,11 +1,15 @@
-import { pedido, htmlProducto } from '../index.js';
+import { pedido, agregarPrecio ,htmlPedido } from '../index.js';
 
 const modal = document.querySelector(".productos");
 
-export const imprimirPedido =()=>{
-
+export const imprimirPedido = async()=>{
     modal.innerHTML = '';
-   pedido.pedidos.forEach( htmlProducto );
+   
+    const nuevoPedido = pedido.pedidos;
+   
+    const pedidos = await agregarPrecio( nuevoPedido );
+
+    pedidos.forEach( htmlPedido );
 
 };
 

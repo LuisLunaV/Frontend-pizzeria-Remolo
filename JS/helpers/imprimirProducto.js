@@ -1,4 +1,4 @@
-import { getProductos, getPrecios, htmlProducto, tarjetaProductos } from '../index.js';
+import { getProductos, agregarPrecio, htmlProducto, tarjetaProductos } from '../index.js';
 
 const modal = document.querySelector(".productos");
 
@@ -14,29 +14,11 @@ const imprimirProducto = async (id) => {
     * Obtenemos la informacion de las APIS 
     */
     const { producto } = await getProductos(id);
-    const { precio } = await getPrecios();
-  
-    /**
-     * Utilizamos una estructura de datos tipo dicionarioa para agregar los precios a
-     * los productos.
-     * Este código crea un mapa con los precios asociados a cada identificador de 
-     * producto, y luego utiliza el método map para recorrer el arreglo de productos y 
-     * agregar el precio correspondiente a cada producto en el nuevo arreglo 
-     * productosConPrecio.
-     */
-    const mapPrecios = await precio.reduce((obj, precio)=>{
-      obj[precio.Precio_ProdID] = precio.Precio_Unitario;
-      return obj;
-    }, {});
-  
-    const productosConPrecio = await producto.map( producto => {
-  
-      return {
-        ...producto,
-        precio_Unitario: mapPrecios[ producto.Prod_id ]
-      }
-    });
     
+    /**
+     * Agregamos precios a los productos
+     */
+    const productosConPrecio = await agregarPrecio( producto );
      /**
      * Obtenemos la informacio de los productos y el precio para mandarlos a imprimir en el DOM.
      */

@@ -2,7 +2,6 @@ import { getPrecios } from '../index.js';
 
 export const agregarPrecio = async( producto )=>{
     const { precio } = await getPrecios();
-
     /**
      * Utilizamos una estructura de datos tipo dicionarioa para agregar los precios a
      * los productos.
