@@ -1,11 +1,12 @@
-import { imprimirPedido } from '../index.js';
+import { imprimirPedido, mostrarContenedorTotal, ocultarContenedorTotal } from '../index.js';
 // Elementos del dropdown y el boton principal responsive
 const dropdownMenu = document.querySelector(".dropdown-menu"),
   btnInputResponsive = document.querySelector(".btn-input-responsive");
 
 // Elementos del modal productos
 const modalDeProductos = document.querySelector(".modal-productos"),
-  modalContenedorProductos = document.querySelector(".contenedor-productos");
+  modalContenedorProductos = document.querySelector(".contenedor-productos"),
+  contenedorDelTotal = document.querySelector('.total-productos');
 
 /**
  * Nos ayuda a mostrar los items del dropdown, y los pedidos almacenados.
@@ -23,6 +24,7 @@ const verPedidos = () => {
 
     //mostramos la venta modal
     imprimirPedido();
+    mostrarContenedorTotal();
     abrirModal();
   });
 
@@ -43,6 +45,8 @@ const ventanaModal = () => {
     if (cerrarModal === "X") {
       modalDeProductos.classList.remove("mostrar");
       modalContenedorProductos.classList.remove("tranformX-0");
+      (contenedorDelTotal.classList.contains('mostrar-total'))?
+       ocultarContenedorTotal():'';
     }
   });
 };
