@@ -8,7 +8,7 @@ import { desplegarDropdown } from "./utils/desplegarDropdown.js";
 import { listaDeCategorias } from './utils/menuCategorias.js';
 import { verPedidos, ventanaModal, abrirModal } from './utils/modal.js';
 import { tarjetaProductos } from './utils/cardProducts.js';
-
+import { mostrarContenedorTotal, ocultarContenedorTotal } from './utils/contenedorTotal.js';
 //Componentes
 import { obtenerCategorias }  from './components/categorias.js';
 import { htmlProducto }   from './components/productos.js';
@@ -23,6 +23,8 @@ import { agregarPrecio } from './helpers/agregarPrecio.js';
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
 export{
+mostrarContenedorTotal,
+ocultarContenedorTotal,
 agregarPrecio,
 pedido,
 PedidosLista,
