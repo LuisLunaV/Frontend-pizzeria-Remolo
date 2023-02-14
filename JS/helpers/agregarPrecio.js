@@ -1,8 +1,6 @@
 import { getPrecios } from '../index.js';
 
-export const agregarPrecio = async( producto )=>{
-    const { precio } = await getPrecios();
-    /**
+/**
      * Utilizamos una estructura de datos tipo dicionarioa para agregar los precios a
      * los productos.
      * Este código crea un mapa con los precios asociados a cada identificador de 
@@ -10,6 +8,11 @@ export const agregarPrecio = async( producto )=>{
      * agregar el precio correspondiente a cada producto en el nuevo arreglo 
      * productosConPrecio.
      */
+
+export const agregarPrecio = async( producto )=>{
+    
+    const { precio } = await getPrecios();
+    
     const mapPrecio = await precio.reduce(( acc, precio ) => {
         acc[precio.Precio_ProdID] = precio.Precio_Unitario;
         return acc;
