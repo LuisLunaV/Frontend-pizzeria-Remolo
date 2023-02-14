@@ -1,5 +1,4 @@
 const modal = document.querySelector(".productos");
-
 export const htmlPedido = ({Prod_id, Prod_Nombre, Prod_categoriaID, Prod_Descripcion, Prod_imagen, precio_Unitario }) =>{
     
     const html = `
@@ -13,13 +12,12 @@ export const htmlPedido = ({Prod_id, Prod_Nombre, Prod_categoriaID, Prod_Descrip
       <p class="text-title">${Prod_Nombre}</p>
       <p class="text-body">${Prod_Descripcion}</p>
     </div>
-    <div class="card-footer">
+    <div class="card-footer-pedido">
     <span class="text-title">$${ precio_Unitario }</span>
-    <div class="card-button-agregar">
+    <div class="card-button-eliminar">
     <input class='button-eliminar' type="button" value="Eliminar" />
   </div>
   </div>
-
 </div>
 </div>
     `;
