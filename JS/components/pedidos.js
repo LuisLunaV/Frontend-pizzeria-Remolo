@@ -1,5 +1,5 @@
 const modal = document.querySelector(".productos");
-export const htmlPedido = ({Prod_id, Prod_Nombre, Prod_categoriaID, Prod_Descripcion, Prod_imagen, precio_Unitario }) =>{
+export const htmlPedido = ({Prod_id, Prod_Nombre, Prod_categoriaID, Prod_Descripcion, Prod_imagen, precio_Unitario, PD_Cantidad }) =>{
     
     const html = `
     <div class="card" data-value='${ Prod_categoriaID }'>
@@ -11,6 +11,7 @@ export const htmlPedido = ({Prod_id, Prod_Nombre, Prod_categoriaID, Prod_Descrip
     <div class="card-info">
       <p class="text-title">${Prod_Nombre}</p>
       <p class="text-body">${Prod_Descripcion}</p>
+      <p class="text-body">Cantidad:${PD_Cantidad}</p>
     </div>
     <div class="card-footer-pedido">
     <span class="text-title">$${ precio_Unitario }</span>
