@@ -7,9 +7,7 @@ export const imprimirPedido = async()=>{
    
     const nuevoPedido = pedido.pedidos;
    
-    const pedidos = await agregarPrecio( nuevoPedido );
-
-    pedidos.forEach( htmlPedido );
+    nuevoPedido.forEach( htmlPedido );
 
 };
 
