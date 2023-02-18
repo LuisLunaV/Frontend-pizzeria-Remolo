@@ -19,6 +19,10 @@ import { imprimirFormulario } from './components/formulario.js';
 import { imprimirProducto } from './helpers/imprimirProducto.js';
 import { imprimirPedido } from './helpers/imprimirPedidos.js';
 import { agregarPrecio } from './helpers/agregarPrecio.js';
+
+//funciones
+// import { sumarTotal } from './functions/sumarTotal.js';
+
 //servicios de la api
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
