@@ -1,4 +1,4 @@
-import { pedido } from '../index.js';
+import { pedido, agregarPrecio } from '../index.js';
 const tarjetaProductos =()=>{
 
     const cardProducto = document.querySelectorAll('.card');
@@ -16,7 +16,7 @@ const tarjetaProductos =()=>{
      */
     let contador = 1;
 
-    tarjeta.addEventListener('click',( event )=>{
+    tarjeta.addEventListener('click', async( event )=>{
 
         /**
          * Obtenemos los elementos de los botones '+','-' y 'Agregar' de la tarjeta del producto.
@@ -83,21 +83,25 @@ const tarjetaProductos =()=>{
             * Destructuramos el objeto del producto obtenido y le agregamos la nueva propiedad "cantidad", donde se
             * agregara el valor del contador, y devolvemos el objeto.
             */
-           const guardarProducto =  obtenerProducto.map(index =>{
+           const productoSinPrecio =  obtenerProducto.map(index =>{
             return{
                 ...index,
                 PD_Cantidad:contador
             }
            });
 
-           /**
+           //Agregamos el precio al producto seleccionado del pedido
+           const productoConPrecio = await agregarPrecio( productoSinPrecio );
+           
+         /**
             * Realizamos una destructuracion de arreglos para obtener el primer elemento del mismo,
             * y lo guardamos en la constante "productoGuardado".
             * Equivale a: const productoGuardado = guardarProducto[0]; 
             */
-           const [ productoGuardado ] = guardarProducto;
+           const [ productoGuardado ] = productoConPrecio;
            
            //Creamos nuestro pedido.
+
            pedido.nuevoPedido( productoGuardado );
 
 
