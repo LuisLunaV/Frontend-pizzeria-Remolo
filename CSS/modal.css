@@ -182,9 +182,14 @@ font-size: 1.5rem;
     transition: all 500ms ease;
 
 }
-
+/* Este bloque nos ayuda a ocultar el scrollbar del  ".contenedor-productos"*/
+::-webkit-scrollbar {
+    display: none;
+  }
+  
 .contenedor-productos{
     overflow: scroll;
+    border-radius: 1rem;
     background: #fff;
     width: 50rem; /*auto */
     height: 60rem; /*auto */
@@ -216,6 +221,7 @@ font-size: 1.5rem;
 /* Total productos */
 .total-productos{
     background-color: #fff;
+    border-radius: 1rem;
     width: 100%;
     height: auto;
     max-width: 30%;
