@@ -227,6 +227,7 @@ font-size: 1.5rem;
 
 /* Total productos */
 .total-productos{
+    box-shadow: 1px 1px 6px 5px rgba(0, 0, 0, 0.5);
     background-color: #fff;
     border-radius: 1rem;
     width: 100%;

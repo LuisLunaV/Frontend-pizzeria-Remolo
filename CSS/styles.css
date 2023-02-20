@@ -297,48 +297,20 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
-  /* transition: 200ms linear; */
+  transition: 200ms linear;
 }
 
 .img-categoria {
   border-radius: 0.5rem;
-  background-image: linear-gradient(
-    to right bottom,
-    #ea7f60,
-    #ea7554,
-    #e96b49,
-    #e8603d,
-    #e75432,
-    #e64f2d,
-    #e64927,
-    #e54322,
-    #e54322,
-    #e54322,
-    #e54322,
-    #e54322
-  );
+  background: #ff6000;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .item:hover {
-  /* background: #ff6000; */
-  background-image: linear-gradient(
-    to right bottom,
-    #ea7f60,
-    #ea7554,
-    #e96b49,
-    #e8603d,
-    #e75432,
-    #e64f2d,
-    #e64927,
-    #e54322,
-    #e54322,
-    #e54322,
-    #e54322,
-    #e54322
-  );
+  background: #ff6000;
 }
 /* utilizando el selector de clase "img-categoria" despues del hover del primer div "item", especificamos su modificacion. */
 .item:hover .img-categoria {
