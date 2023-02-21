@@ -7,11 +7,16 @@ const listaDeCategorias = document.querySelector('.ulList');
 
 listaDeCategorias.addEventListener('click', async( event )=>{
 
-    const dataValue = event.target.closest('.item-pizza').dataset.value;
+    const opcion = event.target.closest('.item-pizza');
+
+    if( !opcion ){
+        return;
+    }
+
+    const dataValue = opcion.dataset.value;
+    
+    //Mostramos los productos relacionados al ID de la categoria.
     abrirModalProductos();
-    /**
-     * Mostramos los productos relacionados al ID de la categoria.
-     */
     imprimirProducto( dataValue );
     
 });

@@ -2,7 +2,6 @@ import { imprimirFormulario , cerrarModalProductos, abrirModalFormulario } from 
 /**
  * Cuando damos click en el boton "Pagar", llamamos a las funciones
  * que nos permiten continuar con el pedido.
- *
  */
 export const realizarPedido =()=>{
     

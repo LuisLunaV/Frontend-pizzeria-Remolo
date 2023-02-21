@@ -6,7 +6,8 @@ import { PedidosLista } from '../class/pedidos-lista.class.js';
 // Utilidades o funciones de los componentes
 import { desplegarDropdown } from "./utils/desplegarDropdown.js";
 import { listaDeCategorias } from './utils/menuCategorias.js';
-import { verPedidos, ventanaModal } from './utils/modalProductos.js';
+import { modalProductos } from './utils/modalProductos.js';
+import { modalPedidos } from './utils/modalPedidos.js';
 import { tarjetaProductos } from './utils/cardProducts.js';
 import { mostrarContenedorTotal, ocultarContenedorTotal } from './utils/contenedorTotal.js';
 import { realizarPedido } from './utils/realizarPedido.js';
@@ -55,8 +56,8 @@ getCategorias,
 getProductos,
 getPrecios,
 obtenerCategorias,
-verPedidos,
-ventanaModal,
+modalPedidos,
+modalProductos
 }
 
 

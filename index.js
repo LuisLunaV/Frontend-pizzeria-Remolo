@@ -1,9 +1,9 @@
-import {ventanaModal, verPedidos, obtenerCategorias, PedidosLista } from './JS/index.js';
+import {modalProductos, modalPedidos, obtenerCategorias, PedidosLista } from './JS/index.js';
 
 //componentes
 obtenerCategorias();
-verPedidos();
-ventanaModal();
+modalPedidos();
+modalProductos();
 
 //Class
 export const pedido = new PedidosLista();
