@@ -6,27 +6,37 @@ import { PedidosLista } from '../class/pedidos-lista.class.js';
 // Utilidades o funciones de los componentes
 import { desplegarDropdown } from "./utils/desplegarDropdown.js";
 import { listaDeCategorias } from './utils/menuCategorias.js';
-import { verPedidos, ventanaModal, abrirModal } from './utils/modal.js';
+import { verPedidos, ventanaModal } from './utils/modal.js';
 import { tarjetaProductos } from './utils/cardProducts.js';
 import { mostrarContenedorTotal, ocultarContenedorTotal } from './utils/contenedorTotal.js';
+import { realizarPedido } from './utils/realizarPedido.js';
 //Componentes
 import { obtenerCategorias }  from './components/categorias.js';
 import { htmlProducto }   from './components/productos.js';
 import { htmlPedido } from './components/pedidos.js';
-import { imprimirFormulario } from './components/formulario.js';
+import { htmlFormulario } from './components/formulario.js';
 import { htmlTotal } from './components/total.js';
 //Helpers
 import { imprimirProducto } from './helpers/imprimirProducto.js';
 import { imprimirPedido } from './helpers/imprimirPedidos.js';
+import { imprimirFormulario } from './helpers/imprimirFormulario.js';
 import { agregarPrecio } from './helpers/agregarPrecio.js';
 
 //funciones
+import { abrirModalProductos } from './functions/abrirModalProductos.js';
+import { cerrarModalProductos } from './functions/cerrarModalProductos.js';
 import { sumarTotal } from './functions/sumarTotal.js';
-
+import { abrirModalFormulario } from './functions/abrirModalFormulario.js';
 //servicios de la api
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
 export{
+abrirModalProductos,
+imprimirFormulario,
+htmlFormulario,
+abrirModalFormulario,
+cerrarModalProductos,
+realizarPedido,
 sumarTotal,
 htmlTotal,
 mostrarContenedorTotal,
@@ -37,10 +47,8 @@ PedidosLista,
 htmlPedido,
 htmlProducto,
 tarjetaProductos,
-abrirModal,
 imprimirPedido,
 imprimirProducto,
-imprimirFormulario,
 listaDeCategorias,
 desplegarDropdown,
 getCategorias,
