@@ -21,7 +21,7 @@ align-items: center;
     display: none;
 }
 
-.tranform-0{
+.tranformY-0{
     /* contenedor */
     transform: translateY(0%) !important;
 }
