@@ -1,4 +1,5 @@
 import { pedido, agregarPrecio } from '../index.js';
+
 const tarjetaProductos =()=>{
 
     const cardProducto = document.querySelectorAll('.card');
@@ -11,16 +12,14 @@ const tarjetaProductos =()=>{
 
     const cantidadProducto = tarjeta.querySelector('.cantidad-span');
 
-    /**
-     * La variable contador es la cantidad de productos necesarios.
-     */
+
+     //La variable contador es la cantidad de productos necesarios.
+     
     let contador = 1;
 
     tarjeta.addEventListener('click', async( event )=>{
 
-        /**
-         * Obtenemos los elementos de los botones '+','-' y 'Agregar' de la tarjeta del producto.
-         */
+         // Obtenemos los elementos de los botones '+','-' y 'Agregar' de la tarjeta del producto.
         const btnPlusMinus = event.target.closest('.button-card');
         const btnAgregar   = event.target.closest('.button-agregar');
         
@@ -47,15 +46,13 @@ const tarjetaProductos =()=>{
         };
 
         if( btnAgregar ){
-            /**
-             * Obtenemos los lementos que contengan los data-value de categorias y productos.
-             */
+            
+             // Obtenemos los lementos que contengan los data-value de categorias y productos.
             const elementoCateg  = event.target.closest('.card');
             const elementoProd   = event.target.closest('.card-contenido');
             
-            /**
-             * Extraemos los valores "id" de los elementos anteriores.
-             */
+
+             // Extraemos los valores "id" de los elementos anteriores.            
             const categID = elementoCateg.dataset.value;
             const prodID  = elementoProd.dataset.value;
 
@@ -67,9 +64,8 @@ const tarjetaProductos =()=>{
            
             const { producto } = JSON.parse( listaProd );
 
-            /**
-             * Buscamos el producto seleccionado
-             */
+            
+             //Buscamos el producto seleccionado             
             const obtenerProducto = producto.filter( producto => {
             
             if( prodID == producto.Prod_id){

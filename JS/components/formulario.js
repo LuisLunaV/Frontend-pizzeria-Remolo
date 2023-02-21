@@ -2,7 +2,8 @@
  * Creamos el html que nos apoyara a enviar los datos de entrega del cliente.
  */
 const modal = document.querySelector(".contenido-modal");
-const htmlFormulario = () => {
+
+export const htmlFormulario = () => {
   const html = `
       <!-- Fomularios -->
       <form class="form-registro-cli">
@@ -24,12 +25,5 @@ const htmlFormulario = () => {
         </div>
       </form>`;
 
-  modal.innerHTML += html;
+  modal.innerHTML = html;
 };
-
-const imprimirFormulario = () => {
-  modal.innerHTML = "";
-  htmlFormulario();
-};
-
-export { imprimirFormulario };
