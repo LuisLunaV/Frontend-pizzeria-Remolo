@@ -10,8 +10,8 @@ const pedidos = JSON.parse( localStorage.getItem('pedidos'));
 
 const precios = [];
 
-pedidos.forEach(({PD_Cantidad, precio_Unitario }) => {
-    precios.push( PD_Cantidad*precio_Unitario);
+pedidos.forEach(({PD_Cantidad, PD_PrecioUnitario }) => {
+    precios.push( PD_Cantidad* PD_PrecioUnitario);
 });
 
 const total = precios.reduce((acc, valor)=>{
