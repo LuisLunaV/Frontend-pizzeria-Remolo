@@ -11,6 +11,10 @@ export const enviarFormulario =( form )=>{
         }
     }
 
-    console.log(formData);
+
+    const pedido =JSON.parse( localStorage.getItem('pedidos') );
+    pedido.forEach(element => {
+        console.log(element)
+    });
 
 };
