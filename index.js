@@ -2,8 +2,9 @@ import {modalProductos, modalPedidos, obtenerCategorias, PedidosLista } from './
 
 //componentes
 obtenerCategorias();
-modalPedidos();
 modalProductos();
+modalPedidos();
+
 
 //Class
 export const pedido = new PedidosLista();
