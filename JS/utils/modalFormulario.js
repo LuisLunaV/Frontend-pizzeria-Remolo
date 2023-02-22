@@ -9,7 +9,11 @@ const btnCerrar = document.querySelector('.btn-cerrar');
 export const modalFormulario =()=>{
 
     btnCerrar.addEventListener('click',()=>{
-       cerrarModalFormulario(); 
+        
+       const salir = confirm("¿Esta seguro que desea salir del formulario?")
+       
+       if( salir ) cerrarModalFormulario(); 
+       
     });
 
 
@@ -19,6 +23,7 @@ const form = document.querySelector('.form-registro-cli');
         event.preventDefault();
 
         enviarFormulario( form );
+        cerrarModalFormulario();
 
     });
 };
