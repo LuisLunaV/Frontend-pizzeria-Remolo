@@ -8,9 +8,11 @@ import { desplegarDropdown } from "./utils/desplegarDropdown.js";
 import { listaDeCategorias } from './utils/menuCategorias.js';
 import { modalProductos } from './utils/modalProductos.js';
 import { modalPedidos } from './utils/modalPedidos.js';
+import { modalFormulario } from './utils/modalFormulario.js';
 import { tarjetaProductos } from './utils/cardProducts.js';
 import { mostrarContenedorTotal, ocultarContenedorTotal } from './utils/contenedorTotal.js';
 import { realizarPedido } from './utils/realizarPedido.js';
+
 //Componentes
 import { obtenerCategorias }  from './components/categorias.js';
 import { htmlProducto }   from './components/productos.js';
@@ -26,12 +28,17 @@ import { agregarPrecio } from './helpers/agregarPrecio.js';
 //funciones
 import { abrirModalProductos } from './functions/abrirModalProductos.js';
 import { cerrarModalProductos } from './functions/cerrarModalProductos.js';
+import { cerrarModalFormulario } from './functions/cerrarModalFormulario.js';
+import { enviarFormulario } from './functions/enviarFormulario.js';
+
 import { sumarTotal } from './functions/sumarTotal.js';
 import { abrirModalFormulario } from './functions/abrirModalFormulario.js';
 //servicios de la api
 import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
 
 export{
+enviarFormulario,
+cerrarModalFormulario,
 abrirModalProductos,
 imprimirFormulario,
 htmlFormulario,
@@ -56,6 +63,7 @@ getCategorias,
 getProductos,
 getPrecios,
 obtenerCategorias,
+modalFormulario,
 modalPedidos,
 modalProductos
 }
