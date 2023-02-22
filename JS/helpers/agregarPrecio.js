@@ -21,7 +21,7 @@ export const agregarPrecio = async( producto )=>{
     const pedidosConPrecio = producto.map( producto =>{
         return{
             ...producto,
-            precio_Unitario: mapPrecio[ producto.Prod_id ]
+            PD_PrecioUnitario: mapPrecio[ producto.Prod_id ]
         }
     });
 
