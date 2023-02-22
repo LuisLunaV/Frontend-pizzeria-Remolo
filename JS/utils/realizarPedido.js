@@ -1,4 +1,4 @@
-import { imprimirFormulario , cerrarModalProductos, abrirModalFormulario } from "../index.js";
+import { imprimirFormulario , cerrarModalProductos, abrirModalFormulario, modalFormulario } from "../index.js";
 /**
  * Cuando damos click en el boton "Pagar", llamamos a las funciones
  * que nos permiten continuar con el pedido.
@@ -11,5 +11,6 @@ export const realizarPedido =()=>{
         cerrarModalProductos();
         abrirModalFormulario();
         imprimirFormulario();
+        modalFormulario();
     });
 };
