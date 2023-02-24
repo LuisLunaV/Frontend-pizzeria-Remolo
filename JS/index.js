@@ -30,13 +30,14 @@ import { abrirModalProductos } from './functions/abrirModalProductos.js';
 import { cerrarModalProductos } from './functions/cerrarModalProductos.js';
 import { cerrarModalFormulario } from './functions/cerrarModalFormulario.js';
 import { enviarFormulario } from './functions/enviarFormulario.js';
-
+import { enviarPedido } from './functions/enviarPedido.js';
 import { sumarTotal } from './functions/sumarTotal.js';
 import { abrirModalFormulario } from './functions/abrirModalFormulario.js';
 //servicios de la api
-import { getCategorias, getProductos, getPrecios } from "./services/api-calls.js";
+import { getCategorias, getProductos, getPrecios, postUsuarios } from "./services/api-calls.js";
 
 export{
+enviarPedido,
 enviarFormulario,
 cerrarModalFormulario,
 abrirModalProductos,
@@ -62,6 +63,7 @@ desplegarDropdown,
 getCategorias,
 getProductos,
 getPrecios,
+postUsuarios,
 obtenerCategorias,
 modalFormulario,
 modalPedidos,

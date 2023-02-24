@@ -1,16 +1,3 @@
-import { postUsuarios, enviarPedido } from '../index.js';
- // Llamamos los datos del formulario, y los guardomos en un objeto, para despues enviarlo a la API. 
-export const enviarFormulario = async( form )=>{
-
-    const formData = {};
-
-    for(let i of form.elements){
-        if(i.name.length > 0){
-            formData[i.name] = i.value;
-        }
-    }
-
-//   const { usuarios } =  await postUsuarios( formData );
 const usuarios = [{
     
     "Prod_id": 1,
@@ -46,11 +33,13 @@ const usuarios = [{
     "PD_Cantidad": 2,
     "PD_PrecioUnitario": "69.00"
   }
-]
-  await enviarPedido( usuarios );
-    // const pedido =JSON.parse( localStorage.getItem('pedidos') );
-    // pedido.forEach(element => {
-    //     console.log(element)
-    // });
+];
+export const enviarPedido =( usuarios )=>{
+    
+    const pedido = JSON.parse( localStorage.getItem('pedidos'));
 
+    console.log(pedido)
 };
+
+enviarPedido( usuarios );
+

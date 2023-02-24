@@ -10,7 +10,28 @@ const { usuarios, categorias, productos, pedidos, precios } = {
     precios:   '/api/precios'
 };
 
+const postUsuarios = async( formulario ) =>{
 
+    try {
+      const resp = await fetch(`${url}${usuarios}`,{
+            method: 'POST',
+            body: JSON.stringify( formulario ),
+            headers: {
+                'Content-Type':'application/json'
+            }
+        });
+
+        if( resp.ok ){
+            const data = await resp.json();
+            return data;
+
+        }
+
+
+    } catch (error) {
+        throw error;
+    }
+};
 /**
  * Llamamos todas las categorias almacenadas en la BD.
  * Implementamos el alamacenamiento en cache
@@ -111,6 +132,7 @@ const getPrecios = async() => {
 };
 
 export{
+    postUsuarios,
     getCategorias,
     getProductos,
     getPrecios
