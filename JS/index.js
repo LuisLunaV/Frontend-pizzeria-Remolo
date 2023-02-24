@@ -34,7 +34,7 @@ import { enviarPedido } from './functions/enviarPedido.js';
 import { sumarTotal } from './functions/sumarTotal.js';
 import { abrirModalFormulario } from './functions/abrirModalFormulario.js';
 //servicios de la api
-import { getCategorias, getProductos, getPrecios, postUsuarios } from "./services/api-calls.js";
+import { getCategorias, getProductos, getPrecios, postUsuarios, postPedido } from "./services/api-calls.js";
 
 export{
 enviarPedido,
@@ -64,6 +64,7 @@ getCategorias,
 getProductos,
 getPrecios,
 postUsuarios,
+postPedido,
 obtenerCategorias,
 modalFormulario,
 modalPedidos,

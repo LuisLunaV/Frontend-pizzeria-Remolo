@@ -10,6 +10,7 @@ const { usuarios, categorias, productos, pedidos, precios } = {
     precios:   '/api/precios'
 };
 
+//Hacemos el post de los datos del usuario a la BD.
 const postUsuarios = async( formulario ) =>{
 
     try {
@@ -25,13 +26,43 @@ const postUsuarios = async( formulario ) =>{
             const data = await resp.json();
             return data;
 
-        }
+        }else throw 'Fallo la solicitud';
 
 
     } catch (error) {
         throw error;
     }
 };
+
+//Hacemos el post de los pedidos a la BD.
+const postPedido = async( pedido )=>{
+    console.log(pedido)
+    try {
+        const resp = await fetch(`${url}${pedidos}`,{
+            method: 'POST',
+            body: JSON.stringify( pedido ),
+            headers: {
+                'Content-Type':'application/json'
+            }
+        });
+    
+        if( resp.ok ){
+
+            const data = await resp.json();
+            return data;
+    
+        }else throw 'Fallo la solicitud';
+
+    } catch (error) {
+        
+        throw error;
+    
+    }
+
+
+
+};
+
 /**
  * Llamamos todas las categorias almacenadas en la BD.
  * Implementamos el alamacenamiento en cache
@@ -132,6 +163,7 @@ const getPrecios = async() => {
 };
 
 export{
+    postPedido,
     postUsuarios,
     getCategorias,
     getProductos,
