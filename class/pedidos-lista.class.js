@@ -13,6 +13,10 @@ export class PedidosLista{
     
     }
 
+    limpiarLocalStorage(){
+        localStorage.removeItem('pedidos');
+    }
+
     guardarLocalStorage(){
 
         localStorage.setItem('pedidos', JSON.stringify( this.pedidos ));

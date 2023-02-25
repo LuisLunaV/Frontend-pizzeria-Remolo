@@ -1,13 +1,12 @@
-import { pedido, htmlPedido, sumarTotal } from '../index.js';
+import { pedido, htmlPedido, sumarTotal, limpiarModalProductos } from '../index.js';
 
-const modal = document.querySelector(".productos");
 
 /**
  * Imprimimos los productos del pedido y el total a pagar.
  */
 export const imprimirPedido = async()=>{
 
-    modal.innerHTML = '';
+    limpiarModalProductos();
    
     const nuevoPedido = pedido.pedidos;
    

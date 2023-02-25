@@ -1,14 +1,13 @@
-import { getProductos, agregarPrecio, htmlProducto, tarjetaProductos } from '../index.js';
+import { getProductos, agregarPrecio, htmlProducto, tarjetaProductos, limpiarModalProductos } from '../index.js';
 
-const modal = document.querySelector(".productos");
 
 
 const imprimirProducto = async (id) => {
     /**
-     * Con la instruccion modal.innerHTML = ''; vaciamos todo el contenido del
-     * elemento modal, antes de imprimir unas nuevas targeta.
+     * Con esta funcion vaciamos todo el contenido del elemento modal productos, antes de imprimir 
+     * unas nuevas tarjetas.
      */
-    modal.innerHTML = "";
+    limpiarModalProductos()
   
    /**
     * Obtenemos la informacion de las APIS 
