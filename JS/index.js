@@ -24,7 +24,7 @@ import { imprimirProducto } from './helpers/imprimirProducto.js';
 import { imprimirPedido } from './helpers/imprimirPedidos.js';
 import { imprimirFormulario } from './helpers/imprimirFormulario.js';
 import { agregarPrecio } from './helpers/agregarPrecio.js';
-
+import { limpiarModalProductos } from './helpers/limpiarModalProductos.js';
 //funciones
 import { abrirModalProductos } from './functions/abrirModalProductos.js';
 import { cerrarModalProductos } from './functions/cerrarModalProductos.js';
@@ -37,6 +37,7 @@ import { abrirModalFormulario } from './functions/abrirModalFormulario.js';
 import { getCategorias, getProductos, getPrecios, postUsuarios, postPedido } from "./services/api-calls.js";
 
 export{
+limpiarModalProductos,
 enviarPedido,
 enviarFormulario,
 cerrarModalFormulario,
