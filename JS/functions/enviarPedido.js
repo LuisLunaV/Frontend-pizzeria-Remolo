@@ -1,4 +1,4 @@
-import { postPedido } from '../index.js';
+import { postPedido, pedido, limpiarModalProductos } from '../index.js';
 
 export const enviarPedido = async( {Usuario_Id} )=>{
 
@@ -21,9 +21,11 @@ export const enviarPedido = async( {Usuario_Id} )=>{
     for (const pedido of pedidos) {
         await postPedido(pedido);
       }
-};
 
-
+    limpiarModalProductos();
+     pedido.limpiarLocalStorage();
+    
+    };
 
 /**
  * Nota: La función forEach no espera a que se completen todas las operaciones asíncronas antes de continuar con la siguiente iteración, 
