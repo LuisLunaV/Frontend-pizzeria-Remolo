@@ -11,7 +11,7 @@ export const enviarFormulario = async( form )=>{
     }
 
   const { usuario } =  await postUsuarios( formData );
- 
+
   enviarPedido( usuario );
     
 
