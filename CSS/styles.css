@@ -18,10 +18,21 @@ body {
   line-height: 1.5;
 }
 /* Utilidades */
+.centrar-flex{
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
 .mostrar-elemento {
   display: none;
 }
+
+.mostrar-contador{
+visibility: visible !important;
+opacity: 1 !important;
+}
+
 
 .ancho-50 {
   width: 80%;
@@ -113,6 +124,29 @@ img {
 
 .nombre-logo h4 span {
   color: #e54322;
+}
+
+.car-shoping{
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
+  background: #ff6000;
+  border-radius: 50%;
+  max-width: 3rem;
+  max-height: 3rem;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  right: 31rem;
+  top: 1.5rem; 
+  transition: all 0.3s ease;
+}
+
+.car-shoping span{
+  font-size: 1.7rem;
+  font-family: var(--fuenteSecundaria);
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {

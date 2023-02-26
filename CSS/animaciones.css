@@ -14,3 +14,23 @@
         opacity:1
     }
 }
+
+/* Contenedor cantidad de productos */
+
+
+.esfera-animada {
+
+    animation: subir-bajar 1s infinite;
+  
+  }
+
+
+@keyframes subir-bajar {
+  
+    50% {
+      
+      transform: translateY(-20%);
+      
+    }
+    
+  }
