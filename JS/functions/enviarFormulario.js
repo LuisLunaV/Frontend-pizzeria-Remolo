@@ -1,7 +1,12 @@
-import { postUsuarios, enviarPedido } from '../index.js';
+import { postUsuarios, enviarPedido, limpiarModalProductos } from '../index.js';
+const total = document.querySelector('.total-productos');
+
  // Llamamos los datos del formulario, y los guardomos en un objeto, para despues enviarlo a la API. 
 export const enviarFormulario = async( form )=>{
 
+    limpiarModalProductos();
+    total.innerHTML="";
+    
     const formData = {};
 
     for(let i of form.elements){
