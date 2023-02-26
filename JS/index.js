@@ -25,7 +25,6 @@ import { imprimirPedido } from './helpers/imprimirPedidos.js';
 import { imprimirFormulario } from './helpers/imprimirFormulario.js';
 import { agregarPrecio } from './helpers/agregarPrecio.js';
 import { limpiarModalProductos } from './helpers/limpiarModalProductos.js';
-import { mostrarCantidadDelPedido } from './helpers/mostrarCantidadPedido.js';
 
 //funciones
 import { abrirModalProductos } from './functions/abrirModalProductos.js';
@@ -36,10 +35,15 @@ import { enviarPedido } from './functions/enviarPedido.js';
 import { sumarTotal } from './functions/sumarTotal.js';
 import { abrirModalFormulario } from './functions/abrirModalFormulario.js';
 import { agregarProducto } from './functions/agregarProducto.js';
+import { mostrarCantidadDelPedido } from './functions/mostrarCantidadPedido.js';
+import { ocultarCantidadPedidos } from './functions/ocultarCantidadPedidos.js';
+
+
 //servicios de la api
 import { getCategorias, getProductos, getPrecios, postUsuarios, postPedido } from "./services/api-calls.js";
 
 export{
+ocultarCantidadPedidos,
 mostrarCantidadDelPedido,
 agregarProducto,
 limpiarModalProductos,
