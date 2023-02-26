@@ -1,4 +1,4 @@
-import { postPedido, pedido, limpiarModalProductos } from '../index.js';
+import { postPedido, pedido } from '../index.js';
 
 export const enviarPedido = async( {Usuario_Id} )=>{
 
@@ -22,7 +22,6 @@ export const enviarPedido = async( {Usuario_Id} )=>{
         await postPedido(pedido);
       }
 
-    limpiarModalProductos();
      pedido.limpiarLocalStorage();
     
     };
