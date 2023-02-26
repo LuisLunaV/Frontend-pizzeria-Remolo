@@ -1,7 +1,7 @@
 export class PedidosLista{
 
     constructor(){
-
+        
         this.cargarLocalStorage();
     
     }
@@ -13,8 +13,18 @@ export class PedidosLista{
     
     }
 
+    /**
+     *Este codigo asegura de que el valor en el localStorage correspondiente a "pedidos" 
+     sea eliminado antes de cargar la lista de pedidos en la variable this.pedidos
+     */
     limpiarLocalStorage(){
-        localStorage.removeItem('pedidos');
+
+    const pedidos = JSON.parse(localStorage.getItem('pedidos'));
+    if (pedidos) {
+    localStorage.removeItem('pedidos');
+     }
+     this.pedidos = [];
+     
     }
 
     guardarLocalStorage(){
