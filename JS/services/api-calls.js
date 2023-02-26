@@ -36,7 +36,7 @@ const postUsuarios = async( formulario ) =>{
 
 //Hacemos el post de los pedidos a la BD.
 const postPedido = async( pedido )=>{
-    console.log(pedido)
+    
     try {
         const resp = await fetch(`${url}${pedidos}`,{
             method: 'POST',
@@ -58,8 +58,6 @@ const postPedido = async( pedido )=>{
         throw error;
     
     }
-
-
 
 };
 
