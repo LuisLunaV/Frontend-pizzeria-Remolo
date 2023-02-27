@@ -1,4 +1,4 @@
-import { pedido, htmlPedido, sumarTotal, limpiarModalProductos } from '../index.js';
+import { pedido, htmlPedido, sumarTotal, limpiarModalProductos, tarjetaProductos } from '../index.js';
 
 
 /**
@@ -11,6 +11,9 @@ export const imprimirPedido = async()=>{
     const nuevoPedido = pedido.pedidos;
    
     nuevoPedido.forEach( htmlPedido );
+
+    //Esta funcion nos ayuda a capturar los eventos de las tarjetas de producto.
+    tarjetaProductos();
 
     //Imprimimos el total del pedido.
     sumarTotal();
