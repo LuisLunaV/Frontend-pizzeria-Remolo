@@ -10,7 +10,6 @@ import { modalProductos } from './utils/modalProductos.js';
 import { modalPedidos } from './utils/modalPedidos.js';
 import { modalFormulario } from './utils/modalFormulario.js';
 import { tarjetaProductos } from './utils/cardProducts.js';
-import { mostrarContenedorTotal, ocultarContenedorTotal } from './utils/contenedorTotal.js';
 import { realizarPedido } from './utils/realizarPedido.js';
 
 //Componentes
@@ -37,6 +36,8 @@ import { abrirModalFormulario } from './functions/abrirModalFormulario.js';
 import { agregarProducto } from './functions/agregarProducto.js';
 import { mostrarCantidadDelPedido } from './functions/mostrarCantidadPedido.js';
 import { ocultarCantidadPedidos } from './functions/ocultarCantidadPedidos.js';
+import { mostrarContenedorTotal, ocultarContenedorTotal } from './functions/contenedorTotal.js';
+
 
 //servicios de la api
 import { getCategorias, getProductos, getPrecios, postUsuarios, postPedido } from "./services/api-calls.js";
