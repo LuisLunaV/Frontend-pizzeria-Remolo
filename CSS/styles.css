@@ -127,6 +127,7 @@ img {
 }
 
 .car-shoping{
+  z-index: 2;
   opacity: 0;
   visibility: hidden;
   color: #fff;

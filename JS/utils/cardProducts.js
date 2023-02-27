@@ -1,7 +1,6 @@
 import { agregarProducto } from "../index.js";
 
 export const tarjetaProductos = () => {
-
   const cardProducto = document.querySelectorAll(".card");
   /**
    * Realizamos un forEach para seleccionar todas las tarjetas con la clase '.card'
@@ -38,12 +37,8 @@ export const tarjetaProductos = () => {
       }
 
       if (btnAgregar) {
-    
-        agregarProducto( event, contador );
-    
+        agregarProducto(event, contador);
       }
-    
     });
   });
 };
-
