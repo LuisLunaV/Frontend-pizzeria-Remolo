@@ -37,12 +37,13 @@ import { agregarProducto } from './functions/agregarProducto.js';
 import { mostrarCantidadDelPedido } from './functions/mostrarCantidadPedido.js';
 import { ocultarCantidadPedidos } from './functions/ocultarCantidadPedidos.js';
 import { mostrarContenedorTotal, ocultarContenedorTotal } from './functions/contenedorTotal.js';
-
+import { cancelarPedido } from './functions/cancelarPedido.js';
 
 //servicios de la api
 import { getCategorias, getProductos, getPrecios, postUsuarios, postPedido } from "./services/api-calls.js";
 
 export{
+cancelarPedido,
 ocultarCantidadPedidos,
 mostrarCantidadDelPedido,
 agregarProducto,
