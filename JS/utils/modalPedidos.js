@@ -4,9 +4,10 @@ import {
   realizarPedido,
   abrirModalProductos,
 } from "../index.js";
+
 // Elementos del dropdown y el boton principal responsive
 const dropdownMenu = document.querySelector(".dropdown-menu"),
-  btnInputResponsive = document.querySelector(".btn-input-responsive");
+btnInputResponsive = document.querySelector(".btn-input-responsive");
 
 // Nos ayuda a mostrar los items del dropdown, y los pedidos almacenados.
 
