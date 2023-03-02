@@ -1,4 +1,4 @@
-import {modalProductos, modalPedidos, obtenerCategorias, PedidosLista, mostrarCantidadDelPedido } from './JS/index.js';
+import {modalProductos, obtenerCategorias, PedidosLista, mostrarCantidadDelPedido } from './JS/index.js';
 
 //Mostramos la cantidad de pedidos guardados
 mostrarCantidadDelPedido();
@@ -6,7 +6,6 @@ mostrarCantidadDelPedido();
 //componentes
 obtenerCategorias();
 modalProductos();
-modalPedidos();
 
 
 //Class
