@@ -7,6 +7,5 @@ mostrarCantidadDelPedido();
 obtenerCategorias();
 modalProductos();
 
-
 //Class
 export const pedido = new PedidosLista();
