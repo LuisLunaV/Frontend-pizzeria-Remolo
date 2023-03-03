@@ -20,8 +20,8 @@ export const modalPedidos = () => {
   const productosDelLocal = JSON.parse(localStorage.getItem('pedidos'));
   
   if( !productosDelLocal ){
-    cerrarDropDown();
-    return alert('No hay productos en el carrito.');
+    alert('No hay productos en el carrito.');
+    return cerrarDropDown();
   }
 
     cerrarDropDown();
