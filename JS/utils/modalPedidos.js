@@ -2,7 +2,8 @@ import {
   imprimirPedido,
   mostrarContenedorTotal,
   realizarPedido,
-  abrirModalProductos
+  abrirModalProductos,
+  cerrarDropDown
 } from "../index.js";
 
 
@@ -17,10 +18,13 @@ export const modalPedidos = () => {
      es una busqueda independiente de la anterior. Validamos si hay algun producto en el pedido
      */
   const productosDelLocal = JSON.parse(localStorage.getItem('pedidos'));
-  if( !productosDelLocal )return alert('No hay productos en el carrito.');
+  
+  if( !productosDelLocal ){
+    cerrarDropDown();
+    return alert('No hay productos en el carrito.');
+  }
 
-    // ocultamos el menu dropdown
-    document.querySelector(".dropdown-menu").classList.add("mostrar-elemento");
+    cerrarDropDown();
 
     //mostramos la venta modal
     abrirModalProductos();

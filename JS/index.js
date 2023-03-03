@@ -38,7 +38,7 @@ import { mostrarCantidadDelPedido } from './functions/mostrarCantidadPedido.js';
 import { ocultarCantidadPedidos } from './functions/ocultarCantidadPedidos.js';
 import { mostrarContenedorTotal, ocultarContenedorTotal } from './functions/contenedorTotal.js';
 import { cancelarPedido } from './functions/cancelarPedido.js';
-import { cerrarDropDown } from'./functions/cerrarDropDown.js';
+import { cerrarDropDown } from './functions/cerrarDropDown.js';
 //servicios de la api
 import { getCategorias, getProductos, getPrecios, postUsuarios, postPedido } from "./services/api-calls.js";
 
