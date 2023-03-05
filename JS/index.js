@@ -27,24 +27,24 @@ import { agregarPrecio } from "./helpers/agregarPrecio.js";
 import { limpiarModalProductos } from "./helpers/limpiarModalProductos.js";
 
 //logic-funciones
-import { enviarFormulario } from "./logic-functions/enviarFormulario.js";
-import { enviarPedido } from "./logic-functions/enviarPedido.js";
-import { sumarTotal } from "./logic-functions/sumarTotal.js";
-import { cancelarPedido } from "./logic-functions/cancelarPedido.js";
-import { agregarProducto } from "./logic-functions/agregarProducto.js";
+import { enviarFormulario } from "./functions-logic/enviarFormulario.js";
+import { enviarPedido }     from "./functions-logic/enviarPedido.js";
+import { sumarTotal }       from "./functions-logic/sumarTotal.js";
+import { cancelarPedido }   from "./functions-logic/cancelarPedido.js";
+import { agregarProducto }  from "./functions-logic/agregarProducto.js";
 
 //ui-functions
-import { abrirModalFormulario } from "./ui-functions/abrirModalFormulario.js";
-import { abrirModalProductos } from "./ui-functions/abrirModalProductos.js";
-import { cerrarModalProductos } from "./ui-functions/cerrarModalProductos.js";
-import { cerrarModalFormulario } from "./ui-functions/cerrarModalFormulario.js";
-import { ocultarCantidadPedidos } from "./ui-functions/ocultarCantidadPedidos.js";
-import { mostrarCantidadDelPedido } from "./ui-functions/mostrarCantidadPedido.js";
+import { abrirModalFormulario } from "./functions-ui/abrirModalFormulario.js";
+import { abrirModalProductos } from "./functions-ui/abrirModalProductos.js";
+import { cerrarModalProductos } from "./functions-ui/cerrarModalProductos.js";
+import { cerrarModalFormulario } from "./functions-ui/cerrarModalFormulario.js";
+import { ocultarCantidadPedidos } from "./functions-ui/ocultarCantidadPedidos.js";
+import { mostrarCantidadDelPedido } from "./functions-ui/mostrarCantidadPedido.js";
 import {
   mostrarContenedorTotal,
   ocultarContenedorTotal,
-} from "./ui-functions/contenedorTotal.js";
-import { cerrarDropDown } from "./ui-functions/cerrarDropDown.js";
+} from "./functions-ui/contenedorTotal.js";
+import { cerrarDropDown } from "./functions-ui/cerrarDropDown.js";
 
 //servicios de la api
 import {
