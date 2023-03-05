@@ -1,4 +1,4 @@
-import { pedido, htmlPedido, sumarTotal, limpiarModalProductos, tarjetaProductos, cancelarPedido } from '../index.js';
+import { pedido, htmlPedido, sumarTotal, limpiarModalProductos, tarjetaProductos } from '../index.js';
 
 
 /**
@@ -17,8 +17,5 @@ export const imprimirPedido = async()=>{
 
     //Imprimimos el total del pedido.
     sumarTotal();
-
-    //Esta funcion ejecuta el evento del boton cancelar pedido.
-    cancelarPedido();
 };
 

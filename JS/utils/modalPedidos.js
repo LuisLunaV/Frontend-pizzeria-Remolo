@@ -3,7 +3,9 @@ import {
   mostrarContenedorTotal,
   realizarPedido,
   abrirModalProductos,
-  cerrarDropDown
+  cerrarDropDown,
+  cancelarPedido,
+  eliminarProductoDelPedido,
 } from "../index.js";
 
 
@@ -26,10 +28,16 @@ export const modalPedidos = () => {
 
     cerrarDropDown();
 
-    //mostramos la venta modal
+    //mostramos la venta modal junto con los productos del pedido y el total de los mismos
     abrirModalProductos();
     imprimirPedido();
     mostrarContenedorTotal();
+    
+    //Realiza la funcion del boton eliminar de la tarjeta del producto dentro de los pedidos
+    eliminarProductoDelPedido();
+
+    //Ejecuta las funciones de los botones realizar y cancelar
+    cancelarPedido();
     realizarPedido();
   });
 
