@@ -5,7 +5,7 @@ import {
   abrirModalProductos,
   cerrarDropDown,
   cancelarPedido,
-  eliminarProductoDelPedido,
+  tarjetaProductosDelPedido
 } from "../index.js";
 
 
@@ -34,8 +34,8 @@ export const modalPedidos = () => {
     mostrarContenedorTotal();
     
     //Realiza la funcion del boton eliminar de la tarjeta del producto dentro de los pedidos
-    eliminarProductoDelPedido();
-
+    tarjetaProductosDelPedido()
+    
     //Ejecuta las funciones de los botones realizar y cancelar
     cancelarPedido();
     realizarPedido();
