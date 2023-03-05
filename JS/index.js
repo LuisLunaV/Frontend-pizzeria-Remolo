@@ -4,7 +4,6 @@ import { pedido } from "../index.js";
 import { PedidosLista } from "../class/pedidos-lista.class.js";
 
 // Utilidades de los componentes
-import { desplegarDropdown } from "./utils/desplegarDropdown.js";
 import { listaDeCategorias } from "./utils/menuCategorias.js";
 import { modalProductos } from "./utils/modalProductos.js";
 import { modalPedidos } from "./utils/modalPedidos.js";
@@ -28,10 +27,10 @@ import { limpiarModalProductos } from "./helpers/limpiarModalProductos.js";
 
 //logic-funciones
 import { enviarFormulario } from "./functions-logic/enviarFormulario.js";
-import { enviarPedido }     from "./functions-logic/enviarPedido.js";
-import { sumarTotal }       from "./functions-logic/sumarTotal.js";
-import { cancelarPedido }   from "./functions-logic/cancelarPedido.js";
-import { agregarProducto }  from "./functions-logic/agregarProducto.js";
+import { enviarPedido } from "./functions-logic/enviarPedido.js";
+import { sumarTotal } from "./functions-logic/sumarTotal.js";
+import { cancelarPedido } from "./functions-logic/cancelarPedido.js";
+import { agregarProducto } from "./functions-logic/agregarProducto.js";
 
 //ui-functions
 import { abrirModalFormulario } from "./functions-ui/abrirModalFormulario.js";
@@ -40,11 +39,12 @@ import { cerrarModalProductos } from "./functions-ui/cerrarModalProductos.js";
 import { cerrarModalFormulario } from "./functions-ui/cerrarModalFormulario.js";
 import { ocultarCantidadPedidos } from "./functions-ui/ocultarCantidadPedidos.js";
 import { mostrarCantidadDelPedido } from "./functions-ui/mostrarCantidadPedido.js";
+import { desplegarDropdown } from "./functions-ui/desplegarDropdown.js";
+import { cerrarDropDown } from "./functions-ui/cerrarDropDown.js";
 import {
   mostrarContenedorTotal,
   ocultarContenedorTotal,
 } from "./functions-ui/contenedorTotal.js";
-import { cerrarDropDown } from "./functions-ui/cerrarDropDown.js";
 
 //servicios de la api
 import {
