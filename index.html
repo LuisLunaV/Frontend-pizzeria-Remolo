@@ -9,12 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/fontawesome-free-6.2.1-web/css/all.css">
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="stylesheet" href="CSS/modal.css" />
     <link rel="stylesheet" href="CSS/animaciones.css" />
     <link rel="stylesheet" href="CSS/cards.css" />
-    <link rel="stylesheet" href="assets/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="CSS/styles-alerts.css" />
     <title>DON REMOLO</title>
   </head>
   <body>
@@ -46,8 +47,28 @@
       </div>
       <div class="total-productos ocultar-total">
       </div>
-
      </div>
+
+     <!-- Modal de los alerts -->
+     <div class="modal-alerts">
+      <div class="contenedor-alert">
+        <div class="icon-alert centrar-flex">
+          <!-- <i class="fa-solid fa-cart-shopping fa-8x"></i> -->
+          <!-- <i class="fa-solid fa-circle-exclamation fa-8x"></i> -->
+          <!-- <i class="fa-solid fa-square-check fa-9x"></i> -->
+          <i class="fa-regular fa-circle-question fa-10x"></i>
+        </div>
+        <div class="information-alert">
+          <p>
+            ¿Esta seguro que desea cancelar este pedido?
+          </p>
+        </div>
+        <div class="button-closed">
+          <input type="button" value="OK">
+        </div>
+      </div>
+    </div>
+
 
     
     <!-- Encabezado -->

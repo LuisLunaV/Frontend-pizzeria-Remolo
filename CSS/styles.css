@@ -1,6 +1,10 @@
 :root {
   --fuentePrincipal: "Montserrat", sans-serif;
   --fuenteSecundaria: "Open Sans", sans-serif;
+  --danger: #dc3545;
+  --succes: #198754;
+  --border:.5px solid #CACFD2;
+  --borderOrange:.1rem solid #ff6000;
 }
 
 html {
@@ -18,6 +22,12 @@ body {
   line-height: 1.5;
 }
 /* Utilidades */
+.mostrar {
+  /* modal */
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 .centrar-flex{
 display: flex;
 align-items: center;
