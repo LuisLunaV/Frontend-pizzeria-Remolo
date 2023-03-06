@@ -31,6 +31,7 @@ import { enviarPedido } from "./functions-logic/enviarPedido.js";
 import { sumarTotal } from "./functions-logic/sumarTotal.js";
 import { cancelarPedido } from "./functions-logic/cancelarPedido.js";
 import { agregarProducto } from "./functions-logic/agregarProducto.js";
+import { eliminarProductoDelPedido } from './functions-logic/eliminarProductoDelPedido.js';
 
 //ui-functions
 import { abrirModalFormulario } from "./functions-ui/abrirModalFormulario.js";
@@ -56,6 +57,7 @@ import {
 } from "./services/api-calls.js";
 
 export {
+  eliminarProductoDelPedido,
   tarjetaProductosDelPedido,
   cerrarDropDown,
   cancelarPedido,

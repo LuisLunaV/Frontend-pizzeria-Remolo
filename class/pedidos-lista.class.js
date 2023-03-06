@@ -13,6 +13,13 @@ export class PedidosLista{
     
     }
 
+    eliminarUnProductoDelPedido( idProducto ){
+
+      this.pedidos = this.pedidos.filter( producto =>  producto.Prod_id != idProducto );
+      this.guardarLocalStorage();
+      
+    }
+
     /**
      *Este codigo asegura de que el valor en el localStorage correspondiente a "pedidos" 
      sea eliminado antes de cargar la lista de pedidos en la variable this.pedidos

@@ -21,4 +21,6 @@ const total = precios.reduce((acc, valor)=>{
 //Enviamos la cantidad a imprimir en el DOM.
 htmlTotal( total );
 
+return total;
+
 };
