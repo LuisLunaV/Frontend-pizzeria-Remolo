@@ -2,7 +2,8 @@
 import { pedido } from "../index.js";
 //Clase Lista de pedidos
 import { PedidosLista } from "../class/pedidos-lista.class.js";
-
+//Alertas
+import { alertaCarritoVacio } from './components-alert/alertaCarritoVacio.js';
 // Utilidades de los componentes
 import { listaDeCategorias } from "./utils/menuCategorias.js";
 import { modalProductos } from "./utils/modalProductos.js";
@@ -57,6 +58,7 @@ import {
 } from "./services/api-calls.js";
 
 export {
+  alertaCarritoVacio,
   eliminarProductoDelPedido,
   tarjetaProductosDelPedido,
   cerrarDropDown,
