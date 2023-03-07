@@ -1,4 +1,5 @@
 import {
+  alertaCarritoVacio,
   imprimirPedido,
   mostrarContenedorTotal,
   realizarPedido,
@@ -22,7 +23,8 @@ export const modalPedidos = () => {
   const productosDelLocal = JSON.parse(localStorage.getItem('pedidos'));
   
   if( !productosDelLocal ){
-    alert('No hay productos en el carrito.');
+    
+    alertaCarritoVacio()
     return cerrarDropDown();
   }
 
