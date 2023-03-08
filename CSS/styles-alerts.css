@@ -31,3 +31,32 @@ font-family: var(--fuenteSecundaria);
 
     
 }
+
+
+/* Alert-cancelar-pedido */
+.icon-warning{
+    font-size: 1.5rem;
+    border-color: #e35d6a !important;
+    color: var(--danger)  !important;
+}
+
+.confirmButtonSucces-alert{
+    background-color: var(--succes) !important;
+    font-size: 1.5rem !important;
+    font-family: var(--fuenteSecundaria);
+    height: 3.6rem !important;
+    width: auto !important;  
+}
+
+.cancelButtonWarning-alert{
+    font-size: 1.5rem !important;
+    font-family: var(--fuenteSecundaria);
+    height: 3.6rem !important;
+    width: auto !important;  
+}
+
+/* Alert succes */
+
+.icon-succes{
+    font-size: 1.5rem;
+}
