@@ -7,12 +7,16 @@ const modalDeProducto = document.querySelector(".modal-productos");
 
 const modalProductos = () => {
   modalDeProducto.addEventListener("click", (event) => {
-    const elemento = event.target,
-      cerrarModal = elemento.id;
+ 
+    //Si se preciona el boton "x-cerrar". 
+    const cerrar = event.target.closest(".contenedor-close-producto");
+ 
+    if ( cerrar ) {
 
-    if (cerrarModal === "X") {
       cerrarModalProductos();
+
     }
+
   });
 };
 
