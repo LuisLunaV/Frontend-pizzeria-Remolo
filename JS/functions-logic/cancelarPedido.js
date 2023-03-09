@@ -1,14 +1,18 @@
-import { pedido,ocultarCantidadPedidos, cerrarModalProductos, limpiarModalProductos } from '../index.js';
+import { pedido,ocultarCantidadPedidos, cerrarModalProductos, limpiarModalProductos, alertaCancelarPedido } from '../index.js';
 
 export const cancelarPedido = () =>{
     
     const btnCancelarPedido = document.querySelector('.btn-danger');
     
-    btnCancelarPedido.addEventListener('click',()=>{
+    btnCancelarPedido.addEventListener('click',async()=>{
         
-        const cancelarPedido = confirm('¿Esta seguro de cancelar su pedido?')
-        
-        if( cancelarPedido ){
+        /**
+         * Se ejecuta la alerta de cancelar pedido y esperamos si la respuesta es
+         * true o false
+         */
+         const confirmado = await alertaCancelarPedido();
+         
+        if( confirmado ){
         
         pedido.limpiarLocalStorage();
         ocultarCantidadPedidos();
