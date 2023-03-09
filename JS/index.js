@@ -4,6 +4,7 @@ import { pedido } from "../index.js";
 import { PedidosLista } from "../class/pedidos-lista.class.js";
 //Alertas
 import { alertaCarritoVacio } from './components-alert/alertaCarritoVacio.js';
+export { alertaCancelarPedido } from './components-alert/alertaCancelarPedido.js';
 // Utilidades de los componentes
 import { listaDeCategorias } from "./utils/menuCategorias.js";
 import { modalProductos } from "./utils/modalProductos.js";
