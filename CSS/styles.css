@@ -5,6 +5,7 @@
   --succes: #198754;
   --border:.5px solid #CACFD2;
   --borderOrange:.1rem solid #ff6000;
+  --radius: 5px;
 }
 
 html {
@@ -199,6 +200,7 @@ img {
   width: 21rem;
   background-color: white;
   border: 1px solid rgb(255, 96, 0);
+  border-radius: var(--radius);
   box-shadow: rgb(0 0 0 / 50%) 0px 0px 4px 0px;
   margin-top: 0.5rem;
   padding: 2rem;
@@ -249,7 +251,7 @@ img {
   font-size: 1.5rem;
   font-weight: 700;
   border: 0.1rem solid #ff6000;
-  border-radius: 0.5rem;
+  border-radius: var(--radius);
   height: 4rem;
   width: 100%;
   color: #ff6000;
@@ -337,7 +339,7 @@ img {
   padding: 1.8rem;
   width: 20rem;
   max-width: 20rem;
-  border-radius: 0.8rem;
+  border-radius: var(--radius);
   box-shadow: 0px 0px 21px -2px rgba(0, 0, 0, 0.53);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -411,6 +413,7 @@ img {
     font-size: 1.5rem;
     font-family: var(--fuenteSecundaria);
     border: .2rem solid #ff6000;
+    /* border-radius: var(--radius); */
     border-radius: .6rem 0 0 .6rem;
     background-color: transparent;
   }
@@ -419,7 +422,8 @@ img {
     min-height: 50px;
     padding: .5em 1em;
     border: none;
-    border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+    /* border-radius: var(--radius); */
     background-color: #ff6000;
     color: #fff;
     font-size: 15px;

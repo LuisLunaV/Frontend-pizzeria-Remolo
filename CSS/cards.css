@@ -19,7 +19,7 @@
   max-width: 100%;
   overflow: hidden;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: var(--radius);
   transition: 0.3s ease;
 }
 
@@ -129,7 +129,7 @@ svg {
   cursor: pointer;
   color: white;
   background-color: #fd7e14;
-  border-radius: .4em;
+  border-radius: var(--radius);
   border: .1rem solid white;
   font-family: var(--fuenteSecundaria);
   font-size: 1.5rem;
@@ -169,7 +169,7 @@ svg {
   cursor: pointer;
   color: white;
   background-color: #dc3545;
-  border-radius: .4em;
+  border-radius: var(--radius);
   border: .2rem solid white;
   font-family: var(--fuenteSecundaria);
   font-size: 1.5rem;
