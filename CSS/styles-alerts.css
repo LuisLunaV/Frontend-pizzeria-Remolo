@@ -5,6 +5,7 @@
 }
 
 .icon-alert{
+font-family: var(--fuenteSecundaria) !important;
 font-size: 1.5rem;
 border-color: #FF7B00 !important;
 color: #ff6000 !important;
@@ -35,6 +36,7 @@ font-family: var(--fuenteSecundaria);
 
 /* Alert-cancelar-pedido */
 .icon-warning{
+    font-family: var(--fuenteSecundaria) !important;
     font-size: 1.5rem;
     border-color: #e35d6a !important;
     color: var(--danger)  !important;
@@ -59,4 +61,17 @@ font-family: var(--fuenteSecundaria);
 
 .icon-succes{
     font-size: 1.5rem;
+}
+
+/* Alert formularios */
+
+.icon-info{
+    font-family: var(--fuenteSecundaria) !important;
+    font-size: 1.5rem;
+}
+
+.title-info{
+    font-size: 2.5rem !important;
+    font-family: var(--fuenteSecundaria);
+    padding-bottom: 2rem;
 }
