@@ -1,4 +1,4 @@
-import { cerrarModalFormulario, enviarFormulario } from "../index.js";
+import { cerrarModalFormulario, enviarFormulario, alertaSalidaDelFormulario } from "../index.js";
 
 /**
  * Agregamos los eventos que nos permiten cerrar el formulario, y el evento que nos permite enviar
@@ -8,11 +8,13 @@ export const modalFormulario = () => {
   
   const btnCerrar = document.querySelector(".btn-cerrar");
   
-  btnCerrar.addEventListener("click", () => {
-    const salir = confirm("¿Esta seguro que desea salir del formulario?");
+  btnCerrar.addEventListener("click", async() => {
 
-    if (salir) cerrarModalFormulario();
-  });
+  const salir = await alertaSalidaDelFormulario();
+    
+  if (salir) cerrarModalFormulario();
+  
+});
 
   const form = document.querySelector(".form-registro-cli");
 
