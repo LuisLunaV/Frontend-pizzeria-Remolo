@@ -32,7 +32,7 @@ export const alertaCancelarPedido = async() => {
             title: "title-alert",
             icon: "icon-succes",
             htmlContainer: "info-content-alert",
-            confirmButton: 'confirmButtonSucces-alert',
+            confirmButton: 'cancelButtonWarning-alert',
           },
     });
     }
