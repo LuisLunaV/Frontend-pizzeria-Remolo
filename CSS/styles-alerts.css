@@ -43,7 +43,7 @@ font-family: var(--fuenteSecundaria);
 }
 
 .confirmButtonSucces-alert{
-    background-color: var(--succes) !important;
+    background-color: var(--danger) !important;
     font-size: 1.5rem !important;
     font-family: var(--fuenteSecundaria);
     height: 3.6rem !important;
@@ -51,6 +51,7 @@ font-family: var(--fuenteSecundaria);
 }
 
 .cancelButtonWarning-alert{
+    background-color: var(--succes) !important;
     font-size: 1.5rem !important;
     font-family: var(--fuenteSecundaria);
     height: 3.6rem !important;
@@ -65,7 +66,7 @@ font-family: var(--fuenteSecundaria);
 
 /* Alert formularios */
 
-.icon-info{
+.icon-question{
     font-family: var(--fuenteSecundaria) !important;
     font-size: 1.5rem;
 }
@@ -74,4 +75,18 @@ font-family: var(--fuenteSecundaria);
     font-size: 2.5rem !important;
     font-family: var(--fuenteSecundaria);
     padding-bottom: 2rem;
+}
+
+.confirmButtonFormSucces-alert{
+    font-size: 1.5rem !important;
+    font-family: var(--fuenteSecundaria);
+    height: 3.6rem !important;
+    width: 8rem !important;  
+}
+
+.cancelButtonFormWarning-alert{
+    font-size: 1.5rem !important;
+    font-family: var(--fuenteSecundaria);
+    height: 3.6rem !important;
+    width: 8rem !important;  
 }
