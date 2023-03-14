@@ -13,10 +13,10 @@ export const alertaSalidaDelFormulario = async() =>{
         customClass: {
           popup: "popup-alert",
           title: "title-info",
-          icon: "icon-info",
+          icon: "icon-question",
           htmlContainer: "info-content-alert",
-          confirmButton: 'confirmButtonSucces-alert',
-          cancelButton:'cancelButtonWarning-alert'
+          confirmButton: 'confirmButtonFormSucces-alert',
+          cancelButton:'cancelButtonFormWarning-alert'
         },
     
       }).then((result) => {
