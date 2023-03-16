@@ -1,4 +1,4 @@
-import { postUsuarios, enviarPedido, limpiarModalProductos, ocultarCantidadPedidos } from '../index.js';
+import { postUsuarios, enviarPedido, limpiarModalProductos, ocultarCantidadPedidos, alertaDeFormularioEnviado } from '../index.js';
 
 const total = document.querySelector('.total-productos');
 
@@ -17,9 +17,11 @@ export const enviarFormulario = async( form )=>{
         }
     }
 
-  const { usuario } =  await postUsuarios( formData );
-
-  enviarPedido( usuario );
-  ocultarCantidadPedidos();
+    const { usuario } =  await postUsuarios( formData );
+    
+    enviarPedido( usuario );
+    ocultarCantidadPedidos();
+    
+    alertaDeFormularioEnviado();
     
 };
