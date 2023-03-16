@@ -1,50 +1,51 @@
 //index
-import { pedido } from "../index.js";
+export { pedido } from "../index.js";
 //Clase Lista de pedidos
-import { PedidosLista } from "../class/pedidos-lista.class.js";
+export { PedidosLista } from "../class/pedidos-lista.class.js";
 //Alertas
-import { alertaCarritoVacio } from './components-alert/alertaCarritoVacio.js';
+export { alertaCarritoVacio } from './components-alert/alertaCarritoVacio.js';
 export { alertaCancelarPedido } from './components-alert/alertaCancelarPedido.js';
 export { alertaSalidaDelFormulario } from './components-alert/alertaSalidaFormulario.js';
+export { alertaDeFormularioEnviado } from './components-alert/alertaFormularioEnviado.js';
 // Utilidades de los componentes
-import { listaDeCategorias } from "./utils/menuCategorias.js";
-import { modalProductos } from "./utils/modalProductos.js";
-import { modalPedidos } from "./utils/modalPedidos.js";
-import { modalFormulario } from "./utils/modalFormulario.js";
-import { tarjetaProductos } from "./utils/tarjetaProductos.js";
-import { tarjetaProductosDelPedido } from "./utils/tarjetaProductosDelPedido.js";
-import { realizarPedido } from "./utils/realizarPedido.js";
+export { listaDeCategorias } from "./utils/menuCategorias.js";
+export { modalProductos } from "./utils/modalProductos.js";
+export { modalPedidos } from "./utils/modalPedidos.js";
+export { modalFormulario } from "./utils/modalFormulario.js";
+export { tarjetaProductos } from "./utils/tarjetaProductos.js";
+export { tarjetaProductosDelPedido } from "./utils/tarjetaProductosDelPedido.js";
+export { realizarPedido } from "./utils/realizarPedido.js";
 
 //Componentes
-import { obtenerCategorias } from "./components/categorias.js";
-import { htmlProducto } from "./components/productos.js";
-import { htmlPedido } from "./components/pedidos.js";
-import { htmlFormulario } from "./components/formulario.js";
-import { htmlTotal } from "./components/total.js";
+export { obtenerCategorias } from "./components/categorias.js";
+export { htmlProducto } from "./components/productos.js";
+export { htmlPedido } from "./components/pedidos.js";
+export { htmlFormulario } from "./components/formulario.js";
+export { htmlTotal } from "./components/total.js";
 //Helpers
-import { imprimirProducto } from "./helpers/imprimirProducto.js";
-import { imprimirPedido } from "./helpers/imprimirPedidos.js";
-import { imprimirFormulario } from "./helpers/imprimirFormulario.js";
-import { agregarPrecio } from "./helpers/agregarPrecio.js";
-import { limpiarModalProductos } from "./helpers/limpiarModalProductos.js";
+export { imprimirProducto } from "./helpers/imprimirProducto.js";
+export { imprimirPedido } from "./helpers/imprimirPedidos.js";
+export { imprimirFormulario } from "./helpers/imprimirFormulario.js";
+export { agregarPrecio } from "./helpers/agregarPrecio.js";
+export { limpiarModalProductos } from "./helpers/limpiarModalProductos.js";
 
 //logic-funciones
-import { enviarFormulario } from "./functions-logic/enviarFormulario.js";
-import { enviarPedido } from "./functions-logic/enviarPedido.js";
-import { sumarTotal } from "./functions-logic/sumarTotal.js";
-import { cancelarPedido } from "./functions-logic/cancelarPedido.js";
-import { agregarProducto } from "./functions-logic/agregarProducto.js";
-import { eliminarProductoDelPedido } from './functions-logic/eliminarProductoDelPedido.js';
+export { enviarFormulario } from "./functions-logic/enviarFormulario.js";
+export { enviarPedido } from "./functions-logic/enviarPedido.js";
+export { sumarTotal } from "./functions-logic/sumarTotal.js";
+export { cancelarPedido } from "./functions-logic/cancelarPedido.js";
+export { agregarProducto } from "./functions-logic/agregarProducto.js";
+export { eliminarProductoDelPedido } from './functions-logic/eliminarProductoDelPedido.js';
 
 //ui-functions
-import { abrirModalFormulario } from "./functions-ui/abrirModalFormulario.js";
-import { abrirModalProductos } from "./functions-ui/abrirModalProductos.js";
-import { cerrarModalProductos } from "./functions-ui/cerrarModalProductos.js";
-import { cerrarModalFormulario } from "./functions-ui/cerrarModalFormulario.js";
-import { ocultarCantidadPedidos } from "./functions-ui/ocultarCantidadPedidos.js";
-import { mostrarCantidadDelPedido } from "./functions-ui/mostrarCantidadPedido.js";
-import { desplegarDropdown } from "./functions-ui/desplegarDropdown.js";
-import { cerrarDropDown } from "./functions-ui/cerrarDropDown.js";
+export { abrirModalFormulario } from "./functions-ui/abrirModalFormulario.js";
+export { abrirModalProductos } from "./functions-ui/abrirModalProductos.js";
+export { cerrarModalProductos } from "./functions-ui/cerrarModalProductos.js";
+export { cerrarModalFormulario } from "./functions-ui/cerrarModalFormulario.js";
+export { ocultarCantidadPedidos } from "./functions-ui/ocultarCantidadPedidos.js";
+export { mostrarCantidadDelPedido } from "./functions-ui/mostrarCantidadPedido.js";
+export { desplegarDropdown } from "./functions-ui/desplegarDropdown.js";
+export { cerrarDropDown } from "./functions-ui/cerrarDropDown.js";
 import {
   mostrarContenedorTotal,
   ocultarContenedorTotal,
@@ -60,45 +61,11 @@ import {
 } from "./services/api-calls.js";
 
 export {
-  alertaCarritoVacio,
-  eliminarProductoDelPedido,
-  tarjetaProductosDelPedido,
-  cerrarDropDown,
-  cancelarPedido,
-  ocultarCantidadPedidos,
-  mostrarCantidadDelPedido,
-  agregarProducto,
-  limpiarModalProductos,
-  enviarPedido,
-  enviarFormulario,
-  cerrarModalFormulario,
-  abrirModalProductos,
-  imprimirFormulario,
-  htmlFormulario,
-  abrirModalFormulario,
-  cerrarModalProductos,
-  realizarPedido,
-  sumarTotal,
-  htmlTotal,
   mostrarContenedorTotal,
   ocultarContenedorTotal,
-  agregarPrecio,
-  pedido,
-  PedidosLista,
-  htmlPedido,
-  htmlProducto,
-  tarjetaProductos,
-  imprimirPedido,
-  imprimirProducto,
-  listaDeCategorias,
-  desplegarDropdown,
   getCategorias,
   getProductos,
   getPrecios,
   postUsuarios,
   postPedido,
-  obtenerCategorias,
-  modalFormulario,
-  modalPedidos,
-  modalProductos,
 };
