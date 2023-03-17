@@ -33,6 +33,14 @@ git clone git@github.com:LuisLunaV/Frontend-pizzeria-Remolo.git
 4. Valide su pedido, su total a pagar y click en "Completar pedido".
 5. Complete la información solicitada y haga clic en "Enviar pedido".
 
+<br>
+<br>
+
+# Backend
+El back-end para este proyecto se encuentra en otro repositorio. Puedes descargarlo desde aquí: https://github.com/LuisLunaV/Backend-Pizzeria-Remolo. <br> Asegúrate de seguir las instrucciones de instalación y configuración proporcionadas en el README del back-end antes de ejecutar la aplicación.
+
+<br>
+<br>
 
 ## Contacto
 
